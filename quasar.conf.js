@@ -20,7 +20,6 @@ module.exports = configure(function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
     boot: [
-      'i18n',
       'axios',
     ],
 
@@ -82,7 +81,7 @@ module.exports = configure(function (/* ctx */) {
         },
       https: false,
       port: 8081,
-      open: true // opens browser window automatically
+      open: false // opens browser window automatically
     }},
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework

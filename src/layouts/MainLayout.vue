@@ -30,7 +30,7 @@
             <q-menu
             >
               <q-list style="min-width: 100px">
-                <messages></messages>
+                <Messages></Messages>
                 <q-card class="text-center no-shadow no-border">
                   <q-btn label="View All" style="max-width: 120px !important;" flat dense
                          class="text-indigo-8"></q-btn>
@@ -122,37 +122,6 @@
               </q-item-section>
               <q-item-section>
                 <q-item-label>Maintenance</q-item-label>
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </q-expansion-item>
-        <q-expansion-item
-          icon="map"
-          label="Maps"
-        >
-          <q-list class="q-pl-lg">
-            <q-item to="/Map" active-class="q-item-no-link-highlighting">
-              <q-item-section avatar>
-                <q-icon name="map"/>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Map</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-item to="/MapMarker" active-class="q-item-no-link-highlighting">
-              <q-item-section avatar>
-                <q-icon name="location_on"/>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Map Marker</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-item to="/StreetView" active-class="q-item-no-link-highlighting">
-              <q-item-section avatar>
-                <q-icon name="streetview"/>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Street View</q-item-label>
               </q-item-section>
             </q-item>
           </q-list>
@@ -323,7 +292,7 @@
 
 <script>
 import EssentialLink from 'components/EssentialLink.vue'
-import Messages from "./Messages";
+import Messages from "layouts/Messages";
 
 import { defineComponent, ref } from 'vue'
 
@@ -331,6 +300,7 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
+    Messages,
     EssentialLink
   },
 
