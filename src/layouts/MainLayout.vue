@@ -56,10 +56,7 @@
       class="bg-primary text-white"
     >
       <q-list>
-        <q-item
-          to="/admin/dashboard"
-          active-class="q-item-no-link-highlighting"
-        >
+        <q-item to="/admin/dashboard" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="dashboard" />
           </q-item-section>
@@ -67,10 +64,7 @@
             <q-item-label>Dashboard</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item
-          to="/admin/dashboard2"
-          active-class="q-item-no-link-highlighting"
-        >
+        <q-item to="/admin/dashboard2" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="dashboard" />
           </q-item-section>
@@ -80,7 +74,7 @@
         </q-item>
         <q-expansion-item icon="pages" label="Pages">
           <q-list class="q-pl-lg">
-            <q-item to="/admin/lock" active-class="q-item-no-link-highlighting">
+            <q-item to="/admin/lock" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="lock" />
               </q-item-section>
@@ -88,7 +82,7 @@
                 <q-item-label>Lock Screen</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item to="/Lock-2" active-class="q-item-no-link-highlighting">
+            <q-item to="/Lock-2" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="lock" />
               </q-item-section>
@@ -96,10 +90,7 @@
                 <q-item-label>Lock Screen - 2</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item
-              to="/admin/pricing"
-              active-class="q-item-no-link-highlighting"
-            >
+            <q-item to="/admin/pricing" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="list" />
               </q-item-section>
@@ -110,10 +101,7 @@
             <q-item-label header class="text-weight-bolder text-white"
               >Generic</q-item-label
             >
-            <q-item
-              to="/admin/profile"
-              active-class="q-item-no-link-highlighting"
-            >
+            <q-item to="/admin/profile" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="person" />
               </q-item-section>
@@ -121,10 +109,7 @@
                 <q-item-label>User Profile</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item
-              to="/admin/maintenance"
-              active-class="q-item-no-link-highlighting"
-            >
+            <q-item to="/admin/maintenance" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="settings" />
               </q-item-section>
@@ -135,10 +120,7 @@
           </q-list>
         </q-expansion-item>
 
-        <q-item
-          to="/admin/directory"
-          active-class="q-item-no-link-highlighting"
-        >
+        <q-item to="/admin/directory" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="card_giftcard" />
           </q-item-section>
@@ -147,10 +129,7 @@
           </q-item-section>
         </q-item>
 
-        <q-item
-          to="/admin/treeTable"
-          active-class="q-item-no-link-highlighting"
-        >
+        <q-item to="/admin/treeTable" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="list" />
           </q-item-section>
@@ -158,7 +137,7 @@
             <q-item-label>TreeTable</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item to="/admin/charts" active-class="q-item-no-link-highlighting">
+        <q-item to="/admin/charts" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="insert_chart" />
           </q-item-section>
@@ -166,7 +145,7 @@
             <q-item-label>Charts</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item to="/admin/footer" active-class="q-item-no-link-highlighting">
+        <q-item to="/admin/footer" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="info" />
           </q-item-section>
@@ -174,10 +153,7 @@
             <q-item-label>Footer</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item
-          to="/admin/cardHeader"
-          active-class="q-item-no-link-highlighting"
-        >
+        <q-item to="/admin/cardHeader" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="card_giftcard" />
           </q-item-section>
@@ -185,7 +161,7 @@
             <q-item-label>Card Header</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item to="/admin/cards" active-class="q-item-no-link-highlighting">
+        <q-item to="/admin/cards" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="card_giftcard" />
           </q-item-section>
@@ -193,7 +169,7 @@
             <q-item-label>Cards</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item to="/admin/tables" active-class="q-item-no-link-highlighting">
+        <q-item to="/admin/tables" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="table_chart" />
           </q-item-section>
@@ -201,7 +177,7 @@
             <q-item-label>Tables</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item to="/admin/contact" active-class="q-item-no-link-highlighting">
+        <q-item to="/admin/contact" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="person" />
           </q-item-section>
@@ -209,7 +185,7 @@
             <q-item-label>Contact</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item to="/admin/checkout" active-class="q-item-no-link-highlighting">
+        <q-item to="/admin/checkout" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="check_circle_outline" />
           </q-item-section>
@@ -218,7 +194,7 @@
           </q-item-section>
         </q-item>
 
-        <q-item to="/admin/calendar" active-class="q-item-no-link-highlighting">
+        <q-item to="/admin/calendar" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="date_range" />
           </q-item-section>
@@ -227,10 +203,7 @@
           </q-item-section>
         </q-item>
 
-        <q-item
-          to="/admin/pagination"
-          active-class="q-item-no-link-highlighting"
-        >
+        <q-item to="/admin/pagination" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="date_range" />
           </q-item-section>
@@ -238,10 +211,7 @@
             <q-item-label>Pagination</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item
-          to="/admin/ecommerce"
-          active-class="q-item-no-link-highlighting"
-        >
+        <q-item to="/admin/ecommerce" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="shopping_cart" />
           </q-item-section>
@@ -250,7 +220,7 @@
           </q-item-section>
         </q-item>
         <q-expansion-item icon="menu_open" label="Menu Levels">
-          <q-item class="q-ml-xl" active-class="q-item-no-link-highlighting">
+          <q-item class="q-ml-xl" active-class="text-orange">
             <q-item-section>
               <q-item-label>Level 1</q-item-label>
             </q-item-section>
@@ -259,7 +229,7 @@
             <q-item
               class="q-ml-xl"
               style="margin-left: 55px !important"
-              active-class="q-item-no-link-highlighting"
+              active-class="text-orange"
             >
               <q-item-section>
                 <q-item-label>Level 2.1</q-item-label>
@@ -268,7 +238,7 @@
             <q-expansion-item :header-inset-level="1" label="Level 2.2">
               <q-item
                 style="margin-left: 65px !important"
-                active-class="q-item-no-link-highlighting"
+                active-class="text-orange"
               >
                 <q-item-section>
                   <q-item-label>Level 2.2.1</q-item-label>
@@ -276,7 +246,7 @@
               </q-item>
               <q-item
                 style="margin-left: 65px !important"
-                active-class="q-item-no-link-highlighting"
+                active-class="text-orange"
               >
                 <q-item-section>
                   <q-item-label>Level 2.2.2</q-item-label>
@@ -295,7 +265,6 @@
 </template>
 
 <script>
-import EssentialLink from "components/EssentialLink.vue";
 import Messages from "layouts/Messages";
 
 import { defineComponent, ref } from "vue";
@@ -305,7 +274,6 @@ export default defineComponent({
 
   components: {
     Messages,
-    EssentialLink,
   },
 
   setup() {
