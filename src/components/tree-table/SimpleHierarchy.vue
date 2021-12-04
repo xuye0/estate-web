@@ -1,40 +1,40 @@
 <template>
-    <span>
-      <q-hierarchy :columns="columns" :data="data"></q-hierarchy>
-    </span>
+  <span>
+    <q-hierarchy :columns="columns" :data="data"></q-hierarchy>
+  </span>
 </template>
 
 <script>
-import {defineComponent} from 'vue'
+import { defineComponent } from "vue";
 
 const columns = [
   {
-    name: 'label',
+    name: "label",
     required: true,
-    label: 'Label',
-    align: 'left',
-    field: 'label',
+    label: "Label",
+    align: "left",
+    field: "label",
     // (optional) tell QHierarchy you want this column sortable
     sortable: true,
     // If you want different sorting icon
-    filterable: true
+    filterable: true,
   },
   {
-    name: 'Description',
-    label: 'Description',
+    name: "Description",
+    label: "Description",
     sortable: true,
-    field: 'description',
-    align: 'center',
-    filterable: false
+    field: "description",
+    align: "center",
+    filterable: false,
   },
   {
-    name: 'note',
-    label: 'Note',
+    name: "note",
+    label: "Note",
     sortable: true,
-    field: 'note',
-    align: 'left',
-    filterable: false
-  }
+    field: "note",
+    align: "left",
+    filterable: false,
+  },
 ];
 const data = [
   {
@@ -66,9 +66,9 @@ const data = [
             description: "Node 1.2.2 description",
             note: "Node 1.2.2 note",
             // id: 5
-          }
+          },
         ],
-      }
+      },
     ],
   },
   {
@@ -94,7 +94,7 @@ const data = [
             description: "Node 2.1.2 description",
             note: "Node 2.1.2 note",
             // id: 9
-          }
+          },
         ],
       },
       {
@@ -102,20 +102,19 @@ const data = [
         description: "Node 2.2 description",
         note: "Node 2.2 note",
         // id: 10
-      }
+      },
     ],
-  }
+  },
 ];
 export default defineComponent({
   name: "SimpleHierarchy",
   setup() {
     return {
       columns,
-      data
-    }
-  }
-})
+      data,
+    };
+  },
+});
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

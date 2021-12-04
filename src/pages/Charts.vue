@@ -1,7 +1,6 @@
 <template>
   <q-page class="q-pa-sm">
     <div class="row q-col-gutter-sm q-py-sm">
-
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <scatter-plot></scatter-plot>
       </div>
@@ -16,18 +15,20 @@
 </template>
 
 <script>
-import {defineComponent, defineAsyncComponent} from 'vue'
+import { defineComponent, defineAsyncComponent } from "vue";
 
 export default defineComponent({
   name: "Charts",
   components: {
-    PieChart: defineAsyncComponent(() => import('components/charts/PieChart')),
-    ScatterPlot: defineAsyncComponent(() => import('components/charts/ScatterPlot')),
-    GuageChart: defineAsyncComponent(() => import('components/charts/GuageChart')),
+    PieChart: defineAsyncComponent(() => import("components/charts/PieChart")),
+    ScatterPlot: defineAsyncComponent(() =>
+      import("components/charts/ScatterPlot")
+    ),
+    GuageChart: defineAsyncComponent(() =>
+      import("components/charts/GuageChart")
+    ),
   },
-})
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

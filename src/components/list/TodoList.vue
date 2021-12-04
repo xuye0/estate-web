@@ -4,7 +4,11 @@
       <q-card-section class="text-h6 q-pb-none">
         <q-item>
           <q-item-section avatar>
-            <q-icon color="white" name="library_add_check" style="font-size: 2em;"/>
+            <q-icon
+              color="white"
+              name="library_add_check"
+              style="font-size: 2em"
+            />
           </q-item-section>
 
           <q-item-section>
@@ -21,18 +25,18 @@
 </template>
 
 <script>
-import {defineComponent,defineAsyncComponent} from 'vue'
+import { defineComponent, defineAsyncComponent } from "vue";
 
 export default defineComponent({
-  name: 'ToDoList',
+  name: "ToDoList",
   components: {
-    Todo: defineAsyncComponent(() =>  import('components/Todo')),
+    Todo: defineAsyncComponent(() => import("components/Todo")),
   },
-  setup () {
+  setup() {
     return {
-      layout: 'dense',
-      side: 'right'
-    }
-  }
-})
+      layout: "dense",
+      side: "right",
+    };
+  },
+});
 </script>

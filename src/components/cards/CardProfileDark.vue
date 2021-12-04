@@ -15,14 +15,12 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "CardProfileDark",
-  props:['name','des','text']
-})
+  props: ["name", "des", "text"],
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

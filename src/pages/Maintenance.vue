@@ -3,9 +3,20 @@
     <q-page-container>
       <q-page class="flex flex-center">
         <q-card class="bg-transparent no-border no-shadow">
-          <div class="row items-center full-width justify-center q-col-gutter-lg">
-            <q-icon name="settings" color="bg-grey-2 text-white" size="5rem"></q-icon>
-            <q-icon name="warnings" class="q-ml-lg" color="bg-grey-2 text-white" size="5rem"></q-icon>
+          <div
+            class="row items-center full-width justify-center q-col-gutter-lg"
+          >
+            <q-icon
+              name="settings"
+              color="bg-grey-2 text-white"
+              size="5rem"
+            ></q-icon>
+            <q-icon
+              name="warnings"
+              class="q-ml-lg"
+              color="bg-grey-2 text-white"
+              size="5rem"
+            ></q-icon>
           </div>
           <div class="row full-width">
             <div class="col-lg-12 col-md-12 cl-sm-12 col-xs-12">
@@ -26,13 +37,12 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "Maintenance"
-})
+  name: "Maintenance",
+});
 </script>
-
 
 <style>
 .bg-image {

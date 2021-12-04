@@ -2,7 +2,7 @@
   <q-item clickable>
     <q-item-section avatar>
       <q-avatar>
-        <img :src="avatar">
+        <img :src="avatar" />
       </q-avatar>
     </q-item-section>
 
@@ -16,14 +16,12 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "ContactItem",
-  props: ['avatar', 'name', 'position']
-})
+  props: ["avatar", "name", "position"],
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

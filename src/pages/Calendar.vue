@@ -19,20 +19,16 @@
       @click-head-day="onClickHeadDay"
     >
       <template #day="{ scope: { timestamp } }">
-        <template
-          v-for="event in eventsMap[timestamp.date]"
-          :key="event.id"
-        >
+        <template v-for="event in eventsMap[timestamp.date]" :key="event.id">
           <div
             :class="badgeClasses(event, 'day')"
             :style="badgeStyles(event, 'day')"
             class="my-event"
           >
-            <abbr
-              :title="event.details"
-              class="tooltip"
-            >
-              <span class="title q-calendar__ellipsis">{{ event.title + (event.time ? ' - ' + event.time : '') }}</span>
+            <abbr :title="event.details" class="tooltip">
+              <span class="title q-calendar__ellipsis">{{
+                event.title + (event.time ? " - " + event.time : "")
+              }}</span>
             </abbr>
           </div>
         </template>
@@ -41,31 +37,32 @@
   </q-page>
 </template>
 
-<script>import {
+<script>
+import {
   QCalendarMonth,
   addToDate,
   parseDate,
   parseTimestamp,
-  today
-} from '@quasar/quasar-ui-qcalendar'
-import '@quasar/quasar-ui-qcalendar/src/QCalendarVariables.sass'
-import '@quasar/quasar-ui-qcalendar/src/QCalendarTransitions.sass'
-import '@quasar/quasar-ui-qcalendar/src/QCalendarMonth.sass'
-import {defineComponent} from 'vue'
+  today,
+} from "@quasar/quasar-ui-qcalendar";
+import "@quasar/quasar-ui-qcalendar/src/QCalendarVariables.sass";
+import "@quasar/quasar-ui-qcalendar/src/QCalendarTransitions.sass";
+import "@quasar/quasar-ui-qcalendar/src/QCalendarMonth.sass";
+import { defineComponent } from "vue";
 // The function below is used to set up our demo data
-const CURRENT_DAY = new Date()
+const CURRENT_DAY = new Date();
 
 function getCurrentDay(day) {
-  const newDay = new Date(CURRENT_DAY)
-  newDay.setDate(day)
-  const tm = parseDate(newDay)
-  return tm.date
+  const newDay = new Date(CURRENT_DAY);
+  newDay.setDate(day);
+  const tm = parseDate(newDay);
+  return tm.date;
 }
 
 export default defineComponent({
-  name: 'Calendar',
+  name: "Calendar",
   components: {
-    QCalendarMonth
+    QCalendarMonth,
   },
   data() {
     return {
@@ -73,172 +70,174 @@ export default defineComponent({
       events: [
         {
           id: 1,
-          title: '1st of the Month',
-          details: 'Everything is funny as long as it is happening to someone else',
+          title: "1st of the Month",
+          details:
+            "Everything is funny as long as it is happening to someone else",
           date: getCurrentDay(1),
-          bgcolor: 'orange'
+          bgcolor: "orange",
         },
         {
           id: 2,
-          title: 'Sisters Birthday',
-          details: 'Buy a nice present',
+          title: "Sisters Birthday",
+          details: "Buy a nice present",
           date: getCurrentDay(4),
-          bgcolor: 'green',
-          icon: 'fas fa-birthday-cake'
+          bgcolor: "green",
+          icon: "fas fa-birthday-cake",
         },
         {
           id: 3,
-          title: 'Meeting',
-          details: 'Time to pitch my idea to the company',
+          title: "Meeting",
+          details: "Time to pitch my idea to the company",
           date: getCurrentDay(10),
-          time: '10:00',
+          time: "10:00",
           duration: 120,
-          bgcolor: 'red',
-          icon: 'fas fa-handshake'
+          bgcolor: "red",
+          icon: "fas fa-handshake",
         },
         {
           id: 4,
-          title: 'Lunch',
-          details: 'Company is paying!',
+          title: "Lunch",
+          details: "Company is paying!",
           date: getCurrentDay(10),
-          time: '11:30',
+          time: "11:30",
           duration: 90,
-          bgcolor: 'teal',
-          icon: 'fas fa-hamburger'
+          bgcolor: "teal",
+          icon: "fas fa-hamburger",
         },
         {
           id: 5,
-          title: 'Visit mom',
-          details: 'Always a nice chat with mom',
+          title: "Visit mom",
+          details: "Always a nice chat with mom",
           date: getCurrentDay(20),
-          time: '17:00',
+          time: "17:00",
           duration: 90,
-          bgcolor: 'grey',
-          icon: 'fas fa-car'
+          bgcolor: "grey",
+          icon: "fas fa-car",
         },
         {
           id: 6,
-          title: 'Conference',
-          details: 'Teaching Javascript 101',
+          title: "Conference",
+          details: "Teaching Javascript 101",
           date: getCurrentDay(22),
-          time: '08:00',
+          time: "08:00",
           duration: 540,
-          bgcolor: 'blue',
-          icon: 'fas fa-chalkboard-teacher'
+          bgcolor: "blue",
+          icon: "fas fa-chalkboard-teacher",
         },
         {
           id: 7,
-          title: 'Girlfriend',
-          details: 'Meet GF for dinner at Swanky Restaurant',
+          title: "Girlfriend",
+          details: "Meet GF for dinner at Swanky Restaurant",
           date: getCurrentDay(22),
-          time: '19:00',
+          time: "19:00",
           duration: 180,
-          bgcolor: 'teal',
-          icon: 'fas fa-utensils'
+          bgcolor: "teal",
+          icon: "fas fa-utensils",
         },
         {
           id: 8,
-          title: 'Rowing',
-          details: 'Stay in shape!',
+          title: "Rowing",
+          details: "Stay in shape!",
           date: getCurrentDay(27),
-          bgcolor: 'purple',
-          icon: 'rowing',
-          days: 2
+          bgcolor: "purple",
+          icon: "rowing",
+          days: 2,
         },
         {
           id: 9,
-          title: 'Fishing',
-          details: 'Time for some weekend R&R',
+          title: "Fishing",
+          details: "Time for some weekend R&R",
           date: getCurrentDay(27),
-          bgcolor: 'purple',
-          icon: 'fas fa-fish',
-          days: 2
+          bgcolor: "purple",
+          icon: "fas fa-fish",
+          days: 2,
         },
         {
           id: 10,
-          title: 'Vacation',
-          details: 'Trails and hikes, going camping! Don\'t forget to bring bear spray!',
+          title: "Vacation",
+          details:
+            "Trails and hikes, going camping! Don't forget to bring bear spray!",
           date: getCurrentDay(29),
-          bgcolor: 'purple',
-          icon: 'fas fa-plane',
-          days: 5
-        }
-      ]
-    }
+          bgcolor: "purple",
+          icon: "fas fa-plane",
+          days: 5,
+        },
+      ],
+    };
   },
   computed: {
     eventsMap() {
-      const map = {}
+      const map = {};
       if (this.events.length > 0) {
-        this.events.forEach(event => {
-          (map[event.date] = (map[event.date] || [])).push(event)
+        this.events.forEach((event) => {
+          (map[event.date] = map[event.date] || []).push(event);
           if (event.days !== undefined) {
-            let timestamp = parseTimestamp(event.date)
-            let days = event.days
+            let timestamp = parseTimestamp(event.date);
+            let days = event.days;
             // add a new event for each day
             // skip 1st one which would have been done above
             do {
-              timestamp = addToDate(timestamp, {day: 1})
+              timestamp = addToDate(timestamp, { day: 1 });
               if (!map[timestamp.date]) {
-                map[timestamp.date] = []
+                map[timestamp.date] = [];
               }
-              map[timestamp.date].push(event)
+              map[timestamp.date].push(event);
               // already accounted for 1st day
-            } while (--days > 1)
+            } while (--days > 1);
           }
-        })
+        });
       }
-      console.log(map)
-      return map
-    }
+      console.log(map);
+      return map;
+    },
   },
   methods: {
     badgeClasses(event, type) {
       return {
         [`text-white bg-${event.bgcolor}`]: true,
-        'rounded-border': true
-      }
+        "rounded-border": true,
+      };
     },
     badgeStyles(day, event) {
-      const s = {}
+      const s = {};
       // s.left = day.weekday === 0 ? 0 : (day.weekday * this.parsedCellWidth) + '%'
       // s.top = 0
       // s.bottom = 0
       // s.width = (event.days * this.parsedCellWidth) + '%'
-      return s
+      return s;
     },
     onToday() {
-      this.$refs.calendar.moveToToday()
+      this.$refs.calendar.moveToToday();
     },
     onPrev() {
-      this.$refs.calendar.prev()
+      this.$refs.calendar.prev();
     },
     onNext() {
-      this.$refs.calendar.next()
+      this.$refs.calendar.next();
     },
     onMoved(data) {
-      console.log('onMoved', data)
+      console.log("onMoved", data);
     },
     onChange(data) {
-      console.log('onChange', data)
+      console.log("onChange", data);
     },
     onClickDate(data) {
-      console.log('onClickDate', data)
+      console.log("onClickDate", data);
     },
     onClickDay(data) {
-      console.log('onClickDay', data)
+      console.log("onClickDay", data);
     },
     onClickWorkweek(data) {
-      console.log('onClickWorkweek', data)
+      console.log("onClickWorkweek", data);
     },
     onClickHeadDay(data) {
-      console.log('onClickHeadDay', data)
+      console.log("onClickHeadDay", data);
     },
     onClickHeadWorkweek(data) {
-      console.log('onClickHeadWorkweek', data)
-    }
-  }
-})
+      console.log("onClickHeadWorkweek", data);
+    },
+  },
+});
 </script>
 
 <style>
@@ -262,42 +261,42 @@ export default defineComponent({
 }
 
 .text-white {
-  color: white
+  color: white;
 }
 
 .bg-blue {
-  background: blue
+  background: blue;
 }
 
 .bg-green {
-  background: green
+  background: green;
 }
 
 .bg-orange {
-  background: orange
+  background: orange;
 }
 
 .bg-red {
-  background: red
+  background: red;
 }
 
 .bg-teal {
-  background: teal
+  background: teal;
 }
 
 .bg-grey {
-  background: grey
+  background: grey;
 }
 
 .bg-purple {
-  background: purple
+  background: purple;
 }
 
 .rounded-border {
-  border-radius: 2px
+  border-radius: 2px;
 }
 
 abbr.tooltip {
-  text-decoration: none
+  text-decoration: none;
 }
 </style>

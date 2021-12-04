@@ -1,5 +1,5 @@
 <template>
-  <q-card class="text-white" :style="{'background-image': background_image}">
+  <q-card class="text-white" :style="{ 'background-image': background_image }">
     <q-card-section>
       <div class="text-h6 text-center">
         {{ title }}
@@ -27,15 +27,13 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "CardPricing",
 
-  props:['background_image','title','icon','price','text']
-})
+  props: ["background_image", "title", "icon", "price", "text"],
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
