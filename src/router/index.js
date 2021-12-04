@@ -36,5 +36,10 @@ export default route(function (/* { store, ssrContext } */) {
     ),
   });
 
+  // Router.beforeEach((to, from, next) => {
+  //   console.log(to);
+  //   next();
+  // });
+
   return Router;
 });

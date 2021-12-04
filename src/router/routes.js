@@ -1,31 +1,76 @@
 const routes = [
   {
     path: "/",
+    component: () => import("pages/index/Test.vue"),
+  },
+  {
+    path: "/admin",
     component: () => import("layouts/MainLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/Dashboard.vue") },
-      { path: "/Dashboard2", component: () => import("pages/Dashboard2.vue") },
-      { path: "/Profile", component: () => import("pages/UserProfile.vue") },
-      { path: "/MapMarker", component: () => import("pages/MapMarker.vue") },
-      { path: "/TreeTable", component: () => import("pages/TreeTable.vue") },
-      { path: "/StreetView", component: () => import("pages/StreetView.vue") },
-      { path: "/Cards", component: () => import("pages/Cards.vue") },
-      { path: "/Tables", component: () => import("pages/Tables.vue") },
-      { path: "/Contact", component: () => import("pages/Contact.vue") },
-      { path: "/Checkout", component: () => import("pages/Checkout.vue") },
       {
-        path: "/Ecommerce",
+        path: "dashboard",
+        component: () => import("pages/admin/Dashboard.vue"),
+      },
+      {
+        path: "dashboard2",
+        component: () => import("pages/admin/Dashboard2.vue"),
+      },
+      {
+        path: "profile",
+        component: () => import("pages/admin/UserProfile.vue"),
+      },
+      {
+        path: "mapMarker",
+        component: () => import("pages/admin/MapMarker.vue"),
+      },
+      {
+        path: "treeTable",
+        component: () => import("pages/admin/TreeTable.vue"),
+      },
+      {
+        path: "cards",
+        component: () => import("pages/admin/Cards.vue"),
+      },
+      {
+        path: "tables",
+        component: () => import("pages/admin/Tables.vue"),
+      },
+      {
+        path: "contact",
+        component: () => import("pages/admin/Contact.vue"),
+      },
+      {
+        path: "checkout",
+        component: () => import("pages/admin/Checkout.vue"),
+      },
+      {
+        path: "ecommerce",
         component: () => import("pages/ProductCatalogues.vue"),
       },
-      { path: "/Pagination", component: () => import("pages/Pagination.vue") },
-      { path: "/Charts", component: () => import("pages/Charts.vue") },
-      { path: "/Calendar", component: () => import("pages/Calendar.vue") },
-      { path: "/Directory", component: () => import("pages/Directory.vue") },
-      { path: "/Footer", component: () => import("pages/Footer.vue") },
-      { path: "/CardHeader", component: () => import("pages/CardHeader.vue") },
-
-      // Not completed yet
-      // {path: '/Taskboard', component: () => import('pages/TaskBoard.vue')},
+      {
+        path: "pagination",
+        component: () => import("pages/admin/Pagination.vue"),
+      },
+      {
+        path: "charts",
+        component: () => import("pages/admin/Charts.vue"),
+      },
+      {
+        path: "calendar",
+        component: () => import("pages/admin/Calendar.vue"),
+      },
+      {
+        path: "directory",
+        component: () => import("pages/admin/Directory.vue"),
+      },
+      {
+        path: "footer",
+        component: () => import("pages/admin/Footer.vue"),
+      },
+      {
+        path: "cardHeader",
+        component: () => import("pages/admin/CardHeader.vue"),
+      },
     ],
   },
 
@@ -44,7 +89,7 @@ const routes = [
     component: () => import("pages/Pricing.vue"),
   },
   {
-    path: "/Login-1",
+    path: "/Login",
     component: () => import("pages/Login-1.vue"),
   },
   {

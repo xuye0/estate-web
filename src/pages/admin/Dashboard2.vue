@@ -412,7 +412,7 @@
           <q-carousel-slide :name="1" class="q-pa-none">
             <q-scroll-area class="fit">
               <q-card class="my-card">
-                <img :src="require('src/assets/coding.jpeg')" />
+                <img :src="require('assets/coding.jpeg')" />
 
                 <q-card-section>
                   <div class="text-h6">
@@ -443,7 +443,7 @@
           <q-carousel-slide :name="2" class="q-pa-none">
             <q-scroll-area class="fit">
               <q-card class="my-card">
-                <img :src="require('src/assets/lookgood.jpeg')" />
+                <img :src="require('assets/lookgood.jpeg')" />
 
                 <q-card-section>
                   <div class="text-h6">
@@ -476,7 +476,7 @@
           <q-carousel-slide :name="3" class="q-pa-none">
             <q-scroll-area class="fit">
               <q-card class="my-card">
-                <img :src="require('src/assets/trawel.jpeg')" />
+                <img :src="require('assets/trawel.jpeg')" />
 
                 <q-card-section>
                   <div class="text-h6">
@@ -603,7 +603,7 @@ const sales_data = [
     product_name: "Woman Bag",
     total: "$300,00",
     code: "QWE123",
-    prod_img: require("src/assets/bag.jpg"),
+    prod_img: require("assets/bag.jpg"),
   },
   {
     name: "Mayank Patel",
@@ -616,7 +616,7 @@ const sales_data = [
     product_name: "Laptop",
     total: "$230,00",
     code: "ABC890",
-    prod_img: require("src/assets/laptop.jpg"),
+    prod_img: require("assets/laptop.jpg"),
   },
   {
     name: "Mayur Patel",
@@ -629,7 +629,7 @@ const sales_data = [
     total: "$34,00",
     date: "19 Sept 2020",
     code: "GHI556",
-    prod_img: require("src/assets/jam.jpg"),
+    prod_img: require("assets/jam.jpg"),
   },
   {
     name: "Jeff Galbraith",
@@ -642,7 +642,7 @@ const sales_data = [
     total: "$208,00",
     date: "19 Sept 2020",
     code: "JKL345",
-    prod_img: require("src/assets/action.jpg"),
+    prod_img: require("assets/action.jpg"),
   },
 ];
 const sales_column = [
