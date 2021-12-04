@@ -72,14 +72,24 @@ module.exports = configure(function (/* ctx */) {
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
+      proxy: {
+        '/api': {
+          target: 'http://127.0.0.1:8080',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/api': ''
+          }
+        },
       https: false,
-      port: 8080,
+      port: 8081,
       open: true // opens browser window automatically
-    },
+    }},
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
-      config: {},
+      config: {
+        notify: { /* look at QuasarConfOptions from the API card */ }
+      },
 
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
@@ -93,7 +103,8 @@ module.exports = configure(function (/* ctx */) {
 
       // Quasar plugins
       plugins: [
-        'AppFullscreen'
+        'AppFullscreen',
+        'Notify'
       ]
     },
 

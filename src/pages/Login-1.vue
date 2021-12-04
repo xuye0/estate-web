@@ -21,7 +21,7 @@
             >
               <q-input
                 filled
-                v-model="username"
+                v-model="this.id"
                 label="Username"
                 lazy-rules
               />
@@ -29,14 +29,14 @@
               <q-input
                 type="password"
                 filled
-                v-model="password"
+                v-model="this.password"
                 label="Password"
                 lazy-rules
 
               />
 
               <div>
-                <q-btn label="Login" to="/" type="button" color="primary"/>
+                <q-btn label="Login" @click="handleLogin()" type="button" color="primary"/>
               </div>
             </q-form>
           </q-card-section>
@@ -47,16 +47,24 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue'
-import {ref} from 'vue'
+import {login} from "src/api/user";
 
-export default defineComponent({
-  setup() {
-    return {
-      username: ref('Pratik'),
-      password: ref('12345')
+export default ({
+  data(){
+    return{
+      id:"xuye",
+      password:"123456"
     }
   },
+  methods:{
+    handleLogin(){
+      login(this.id,this.password).then((r)=>{
+       if (r.code===1000){
+         this.$router.push("/")
+       }
+      })
+    }
+  }
 })
 </script>
 
