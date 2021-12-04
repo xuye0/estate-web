@@ -36,10 +36,6 @@ const routes = [
     component: () => import("pages/Error404.vue"),
   },
   {
-    path: "/Mail",
-    component: () => import("layouts/Mail.vue"),
-  },
-  {
     path: "/Maintenance",
     component: () => import("pages/Maintenance.vue"),
   },

@@ -23,28 +23,6 @@
             v-if="$q.screen.gt.sm"
           >
           </q-btn>
-          <q-btn
-            round
-            dense
-            flat
-            color="white"
-            icon="fab fa-github"
-            type="a"
-            href="https://github.com/pratik227/quasar-admin"
-            target="_blank"
-          >
-          </q-btn>
-          <q-btn
-            round
-            dense
-            flat
-            icon="fas fa-heart"
-            style="color: #9d4182 !important"
-            type="a"
-            href="https://github.com/sponsors/pratik227"
-            target="_blank"
-          >
-          </q-btn>
           <q-btn round dense flat color="white" icon="notifications">
             <q-badge color="red" text-color="white" floating> 5 </q-badge>
             <q-menu>
@@ -152,15 +130,6 @@
             </q-item>
           </q-list>
         </q-expansion-item>
-
-        <q-item to="/Mail" active-class="q-item-no-link-highlighting">
-          <q-item-section avatar>
-            <q-icon name="email" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Mail</q-item-label>
-          </q-item-section>
-        </q-item>
 
         <q-item to="/directory" active-class="q-item-no-link-highlighting">
           <q-item-section avatar>
