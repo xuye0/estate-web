@@ -86,8 +86,8 @@ const routes = [
     component: () => import("pages/Maintenance.vue"),
   },
   {
-    path: "/pricing",
-    component: () => import("pages/Pricing.vue"),
+    path: "/welcome",
+    component: () => import("pages/Welcome.vue"),
   },
   {
     path: "/login",

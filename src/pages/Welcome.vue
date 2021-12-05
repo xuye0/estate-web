@@ -15,32 +15,21 @@
             flat
             color="text-grey-7"
             to="/"
-            label="Dashboard"
-            icon="dashboard"
+            label="首页"
+            icon="list"
           >
-            <q-tooltip>Dashboard</q-tooltip>
+            <q-tooltip>首页</q-tooltip>
           </q-btn>
           <q-btn
             square
             dense
             flat
             color="text-grey-7"
-            to="/Pricing"
-            label="Pricing"
-            icon="lock"
+            to="/admin"
+            label="后台"
+            icon="admin_panel_settings"
           >
-            <q-tooltip>Pricing</q-tooltip>
-          </q-btn>
-          <q-btn
-            square
-            dense
-            flat
-            color="text-grey-7"
-            to="/Lock-2"
-            label="Lock"
-            icon="lock"
-          >
-            <q-tooltip>Lock</q-tooltip>
+            <q-tooltip>管理员后台</q-tooltip>
           </q-btn>
         </div>
       </q-toolbar>
