@@ -94,14 +94,6 @@ const routes = [
     name: "login",
     component: () => import("pages/Login-1.vue"),
   },
-  {
-    path: "/lock",
-    component: () => import("pages/LockScreen.vue"),
-  },
-  {
-    path: "/lock2",
-    component: () => import("pages/LockScreen-2.vue"),
-  },
 ];
 
 export default routes;

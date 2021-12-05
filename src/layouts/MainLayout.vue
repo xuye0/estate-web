@@ -74,22 +74,6 @@
         </q-item>
         <q-expansion-item icon="pages" label="Pages">
           <q-list class="q-pl-lg">
-            <q-item to="/lock" active-class="text-orange">
-              <q-item-section avatar>
-                <q-icon name="lock" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Lock Screen</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-item to="/lock2" active-class="text-orange">
-              <q-item-section avatar>
-                <q-icon name="lock" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Lock Screen - 2</q-item-label>
-              </q-item-section>
-            </q-item>
             <q-item to="/pricing" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="list" />
