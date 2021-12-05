@@ -23,28 +23,18 @@
             v-if="$q.screen.gt.sm"
           >
           </q-btn>
-          <q-btn round dense flat color="white" icon="notifications">
-            <q-badge color="red" text-color="white" floating> 5 </q-badge>
-            <q-menu>
-              <q-list style="min-width: 100px">
-                <Messages></Messages>
-                <q-card class="text-center no-shadow no-border">
-                  <q-btn
-                    label="View All"
-                    style="max-width: 120px !important"
-                    flat
-                    dense
-                    class="text-indigo-8"
-                  ></q-btn>
-                </q-card>
-              </q-list>
-            </q-menu>
-          </q-btn>
-          <q-btn round flat>
-            <q-avatar size="26px">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
-            </q-avatar>
-          </q-btn>
+          <q-btn
+            to="/"
+            v-if="$q.screen.gt.sm"
+            round
+            dense
+            flat
+            color="text-grey-7"
+            icon="home"
+          >
+            <q-tooltip>首页</q-tooltip></q-btn
+          >
+          <Avatar></Avatar>
         </div>
       </q-toolbar>
     </q-header>
@@ -252,11 +242,13 @@
 import Messages from "layouts/Messages";
 
 import { defineComponent, ref } from "vue";
+import Avatar from "components/avatar/Avatar";
 
 export default defineComponent({
   name: "MainLayout",
 
   components: {
+    Avatar,
     Messages,
   },
 

@@ -7,6 +7,7 @@ import {
   createWebHashHistory,
 } from "vue-router";
 import routes from "./routes";
+import { Notify } from "quasar";
 
 /*
  * If not building with SSR mode, you can
@@ -38,10 +39,26 @@ export default route(function (/* { store, ssrContext } */) {
   });
 
   Router.beforeEach((to, from, next) => {
-    if (to.name !== "login" && !store().state.user.is_authenticated) {
-      next({ path: "login" });
-    } else {
+    // login和welcome路由免认证
+    const { user } = store().state;
+    if (to.path === "/login" || to.path === "/welcome") {
       next();
+    } else {
+      //未认证的必须认证
+      if (!user.is_authenticated) {
+        next({ path: "/login" });
+      } else if (to.matched[0].path === "/admin") {
+        if (user.is_administrator) next();
+        else {
+          Notify.create({
+            type: "negative",
+            message: "你没有管理权限，不能进入管理后台",
+          });
+          next({ path: from.fullPath });
+        }
+      } else {
+        next();
+      }
     }
   });
 

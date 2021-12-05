@@ -1,12 +1,18 @@
 const routes = [
   {
     path: "/",
-    component: () => import("pages/index/Test.vue"),
+    component: () => import("layouts/Layout.vue"),
+    children: [
+      {
+        path: "/contact",
+        component: () => import("pages/index/Contact.vue"),
+      },
+    ],
   },
   {
     path: "/admin",
     redirect: "/admin/dashboard",
-    component: () => import("layouts/MainLayout.vue"),
+    component: () => import("layouts/AdminLayout.vue"),
     children: [
       {
         path: "dashboard",
@@ -91,7 +97,6 @@ const routes = [
   },
   {
     path: "/login",
-    name: "login",
     component: () => import("pages/Login-1.vue"),
   },
 ];

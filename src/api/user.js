@@ -3,8 +3,15 @@ import qs from "qs";
 
 export function login(id, password) {
   return api({
-    url: "/login",
+    url: "/session",
     method: "post",
     data: qs.stringify({ id, password }),
+  });
+}
+
+export function logout() {
+  return api({
+    url: "/session",
+    method: "delete",
   });
 }

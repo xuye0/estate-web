@@ -17,10 +17,10 @@
           shrink
           class="row items-center no-wrap"
         >
-          <img
-            src="https://cdn.quasar.dev/img/layout-gallery/logo-google.svg"
-          />
-          <span class="q-ml-sm">News</span>
+          <!--          <img-->
+          <!--            src="https://cdn.quasar.dev/img/layout-gallery/logo-google.svg"-->
+          <!--          />-->
+          <span class="q-ml-sm">楼盘信息</span>
         </q-toolbar-title>
 
         <q-space />
@@ -29,25 +29,41 @@
 
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn
+            round
+            dense
+            flat
+            :icon="$q.fullscreen.isActive ? 'fullscreen_exit' : 'fullscreen'"
+            @click="$q.fullscreen.toggle()"
+            v-if="$q.screen.gt.sm"
+          >
+          </q-btn>
+          <q-btn
+            to="/welcome"
             v-if="$q.screen.gt.sm"
             round
             dense
             flat
             color="text-grey-7"
-            icon="apps"
+            icon="bubble_chart"
           >
-            <q-tooltip>Google Apps</q-tooltip>
+            <q-tooltip>欢迎页面</q-tooltip>
           </q-btn>
-          <q-btn round dense flat color="grey-8" icon="notifications">
-            <q-badge color="red" text-color="white" floating> 2 </q-badge>
-            <q-tooltip>Notifications</q-tooltip>
+          <q-btn
+            to="/admin"
+            v-if="$q.screen.gt.sm"
+            round
+            dense
+            flat
+            color="text-grey-7"
+            icon="admin_panel_settings"
+          >
+            <q-tooltip>后台管理页面</q-tooltip>
           </q-btn>
-          <q-btn round flat>
-            <q-avatar size="26px">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
-            </q-avatar>
-            <q-tooltip>Account</q-tooltip>
-          </q-btn>
+          <!--          <q-btn round dense flat color="grey-8" icon="notifications">-->
+          <!--            <q-badge color="red" text-color="white" floating> 2 </q-badge>-->
+          <!--            <q-tooltip>Notifications</q-tooltip>-->
+          <!--          </q-btn>-->
+          <Avatar></Avatar>
         </div>
       </q-toolbar>
     </q-header>
@@ -62,11 +78,11 @@
       <q-scroll-area class="fit">
         <q-list padding class="text-grey-8">
           <q-item
+            :to="link.to"
             class="GNL__drawer-item"
             v-ripple
             v-for="link in links1"
             :key="link.text"
-            :to="link.to"
             clickable
           >
             <q-item-section avatar>
@@ -80,6 +96,7 @@
           <q-separator inset class="q-my-sm" />
 
           <q-item
+            :to="link.to"
             class="GNL__drawer-item"
             v-ripple
             v-for="link in links2"
@@ -96,44 +113,29 @@
 
           <q-separator inset class="q-my-sm" />
 
-          <q-item
-            class="GNL__drawer-item"
-            v-ripple
-            v-for="link in links3"
-            :key="link.text"
-            clickable
-            :to="link.to"
-          >
-            <q-item-section>
-              <q-item-label
-                >{{ link.text }} <q-icon v-if="link.icon" :name="link.icon"
-              /></q-item-label>
-            </q-item-section>
-          </q-item>
-
           <div class="q-mt-md">
-            <div class="flex flex-center q-gutter-xs">
-              <a
-                class="GNL__drawer-footer-link"
-                href="javascript:void(0)"
-                aria-label="Privacy"
-                >Privacy</a
-              >
-              <span> · </span>
-              <a
-                class="GNL__drawer-footer-link"
-                href="javascript:void(0)"
-                aria-label="Terms"
-                >Terms</a
-              >
-              <span> · </span>
-              <a
-                class="GNL__drawer-footer-link"
-                href="javascript:void(0)"
-                aria-label="About"
-                >About Google</a
-              >
-            </div>
+            <!--            <div class="flex flex-center q-gutter-xs">-->
+            <!--              <a-->
+            <!--                class="GNL__drawer-footer-link"-->
+            <!--                href="javascript:void(0)"-->
+            <!--                aria-label="Privacy"-->
+            <!--                >Privacy</a-->
+            <!--              >-->
+            <!--              <span> · </span>-->
+            <!--              <a-->
+            <!--                class="GNL__drawer-footer-link"-->
+            <!--                href="javascript:void(0)"-->
+            <!--                aria-label="Terms"-->
+            <!--                >Terms</a-->
+            <!--              >-->
+            <!--              <span> · </span>-->
+            <!--              <a-->
+            <!--                class="GNL__drawer-footer-link"-->
+            <!--                href="javascript:void(0)"-->
+            <!--                aria-label="About"-->
+            <!--                >About Google</a-->
+            <!--              >-->
+            <!--            </div>-->
           </div>
         </q-list>
       </q-scroll-area>
@@ -148,10 +150,11 @@
 <script>
 import { ref } from "vue";
 import { fasGlobeAmericas, fasFlask } from "@quasar/extras/fontawesome-v5";
+import Avatar from "components/avatar/Avatar";
 
 export default {
   name: "GoogleNewsLayout",
-
+  components: { Avatar },
   setup() {
     const leftDrawerOpen = ref(false);
     const search = ref("");
@@ -197,11 +200,7 @@ export default {
         { icon: "star_border", text: "Favourites" },
         { icon: "search", text: "Saved searches" },
       ],
-      links2: [{ icon: "flag", text: "Canada" }],
-      links3: [
-        { icon: "", text: "介绍页面", to: "/welcome" },
-        { icon: "open_in_new", text: "Help" },
-      ],
+      links2: [{ icon: "flag", text: "联系我们", to: "/contact" }],
       onClear,
       changeDate,
       toggleLeftDrawer,

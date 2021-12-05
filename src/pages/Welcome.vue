@@ -16,20 +16,9 @@
             color="text-grey-7"
             to="/"
             label="首页"
-            icon="list"
+            icon="home"
           >
             <q-tooltip>首页</q-tooltip>
-          </q-btn>
-          <q-btn
-            square
-            dense
-            flat
-            color="text-grey-7"
-            to="/admin"
-            label="后台"
-            icon="admin_panel_settings"
-          >
-            <q-tooltip>管理员后台</q-tooltip>
           </q-btn>
         </div>
       </q-toolbar>
