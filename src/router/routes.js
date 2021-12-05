@@ -82,24 +82,24 @@ const routes = [
     component: () => import("pages/Error404.vue"),
   },
   {
-    path: "/Maintenance",
+    path: "/maintenance",
     component: () => import("pages/Maintenance.vue"),
   },
   {
-    path: "/Pricing",
+    path: "/pricing",
     component: () => import("pages/Pricing.vue"),
   },
   {
-    path: "/Login",
+    path: "/login",
     name: "login",
     component: () => import("pages/Login-1.vue"),
   },
   {
-    path: "/Lock",
+    path: "/lock",
     component: () => import("pages/LockScreen.vue"),
   },
   {
-    path: "/Lock-2",
+    path: "/lock2",
     component: () => import("pages/LockScreen-2.vue"),
   },
 ];

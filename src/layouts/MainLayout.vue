@@ -74,7 +74,7 @@
         </q-item>
         <q-expansion-item icon="pages" label="Pages">
           <q-list class="q-pl-lg">
-            <q-item to="/admin/lock" active-class="text-orange">
+            <q-item to="/lock" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="lock" />
               </q-item-section>
@@ -82,7 +82,7 @@
                 <q-item-label>Lock Screen</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item to="/Lock-2" active-class="text-orange">
+            <q-item to="/lock2" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="lock" />
               </q-item-section>
@@ -90,7 +90,7 @@
                 <q-item-label>Lock Screen - 2</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item to="/admin/pricing" active-class="text-orange">
+            <q-item to="/pricing" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="list" />
               </q-item-section>
@@ -109,7 +109,7 @@
                 <q-item-label>User Profile</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item to="/admin/maintenance" active-class="text-orange">
+            <q-item to="/maintenance" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="settings" />
               </q-item-section>
