@@ -5,6 +5,7 @@ const routes = [
   },
   {
     path: "/admin",
+    redirect: "/admin/dashboard",
     component: () => import("layouts/MainLayout.vue"),
     children: [
       {
@@ -90,6 +91,7 @@ const routes = [
   },
   {
     path: "/Login",
+    name: "login",
     component: () => import("pages/Login-1.vue"),
   },
   {

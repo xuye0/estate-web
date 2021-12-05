@@ -1,4 +1,5 @@
 import { route } from "quasar/wrappers";
+import store from "src/store/index";
 import {
   createRouter,
   createMemoryHistory,
@@ -36,10 +37,13 @@ export default route(function (/* { store, ssrContext } */) {
     ),
   });
 
-  // Router.beforeEach((to, from, next) => {
-  //   console.log(to);
-  //   next();
-  // });
+  Router.beforeEach((to, from, next) => {
+    if (to.name !== "login" && store().state.user.is_authenticated) {
+      next({ path: "login" });
+    } else {
+      next();
+    }
+  });
 
   return Router;
 });

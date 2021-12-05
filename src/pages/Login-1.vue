@@ -55,8 +55,14 @@ export default {
   },
   methods: {
     handleLogin() {
-      login(this.id, this.password).then((r) => {
-        if (r.code === 1000) {
+      login(this.id, this.password).then((res) => {
+        if (res.code === 1000) {
+          const { data } = res;
+          const { user } = data;
+          this.$store.commit("user/SET_LOGIN", {
+            token: data.token,
+            user,
+          });
           this.$router.push("/");
         }
       });

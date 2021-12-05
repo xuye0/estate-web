@@ -1,9 +1,10 @@
 export default function () {
   return {
     id: "",
+    token: "",
     username: "",
     avatar_url: "",
-    isAuthenticated: false,
-    isAdministrator: false,
+    is_authenticated: false,
+    is_administrator: false,
   };
 }
