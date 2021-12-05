@@ -64,14 +64,6 @@
         </q-item>
         <q-expansion-item icon="pages" label="Pages">
           <q-list class="q-pl-lg">
-            <q-item to="/pricing" active-class="text-orange">
-              <q-item-section avatar>
-                <q-icon name="list" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Pricing</q-item-label>
-              </q-item-section>
-            </q-item>
             <q-item-label header class="text-weight-bolder text-white"
               >Generic</q-item-label
             >
@@ -149,14 +141,6 @@
           </q-item-section>
           <q-item-section>
             <q-item-label>Tables</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item to="/admin/contact" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="person" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Contact</q-item-label>
           </q-item-section>
         </q-item>
         <q-item to="/admin/checkout" active-class="text-orange">

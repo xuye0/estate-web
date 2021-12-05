@@ -12,13 +12,6 @@
               :style="{ height: size['height'] - 80 + 'px !important' }"
             >
               <q-list class="">
-                <!--                <q-item-label class="text-center q-pa-sm">-->
-                <!--                  <q-input dense rounded outlined v-model="search">-->
-                <!--                    <template v-slot:append>-->
-                <!--                      <q-icon name="search" />-->
-                <!--                    </template>-->
-                <!--                  </q-input>-->
-                <!--                </q-item-label>-->
                 <q-item-label header class="text-center"
                   >{{ contacts_list.length }} 位联系人</q-item-label
                 >
@@ -29,33 +22,8 @@
                   @click="selected_contact = contact"
                 >
                   <contact-item
-                    :avatar="contact.avatar"
-                    :name="contact.name"
+                    :name="contact.name.charAt(0)"
                     :position="contact.position"
-                  ></contact-item>
-                </span>
-              </q-list>
-            </q-tab-panel>
-
-            <q-tab-panel
-              name="favorites"
-              class="q-pa-none"
-              :style="{ height: size['height'] - 80 + 'px !important' }"
-            >
-              <q-list class="">
-                <q-item-label header class="text-center"
-                  >{{ favorites_list.length }} 位联系人</q-item-label
-                >
-
-                <span
-                  v-for="(favorite, index) in favorites_list"
-                  :key="index"
-                  @click="selected_contact = favorite"
-                >
-                  <contact-item
-                    :avatar="favorite.avatar"
-                    :name="favorite.name"
-                    :position="favorite.position"
                   ></contact-item>
                 </span>
               </q-list>
@@ -67,13 +35,7 @@
               name="all"
               icon="person"
               class="text-capitalize"
-              label="All"
-            ></q-tab>
-            <q-tab
-              name="favorites"
-              icon="star"
-              class="text-capitalize"
-              label="Favorites"
+              label="我们"
             ></q-tab>
           </q-tabs>
         </q-card>
@@ -85,9 +47,9 @@
         >
           <q-toolbar class="text-black">
             <q-btn round flat class="q-pa-sm">
-              <q-avatar size="80px">
-                <img :src="selected_contact.avatar" />
-              </q-avatar>
+              <q-avatar size="80px" color="blue" text-color="white">
+                {{ selected_contact.name.charAt(0) }}</q-avatar
+              >
             </q-btn>
 
             <q-item class="q-subtitle-1 q-pl-md">
@@ -104,9 +66,6 @@
             </q-item>
 
             <q-space />
-
-            <q-btn round flat icon="star_outline" color="yellow"> </q-btn>
-            <q-btn round flat icon="edit" />
           </q-toolbar>
           <q-separator></q-separator>
 
@@ -119,19 +78,20 @@
               :text_color="detail.text_color"
               :value="selected_contact[detail['field']]"
               :label="detail.label"
-            ></contact-detail-item>
+            >
+            </contact-detail-item>
 
-            <q-separator
-              inset="item"
-              v-if="detail_index != detail_list.length - 1"
-            ></q-separator>
+            <!--            <q-separator-->
+            <!--              inset="item"-->
+            <!--              v-if="detail_index !== detail_list.length - 1"-->
+            <!--            ></q-separator>-->
           </div>
         </q-card>
       </div>
     </div>
 
     <div v-else>
-      <div v-if="Object.keys(selected_contact).length == 0">
+      <div v-if="Object.keys(selected_contact).length === 0">
         <q-tab-panels v-model="tab" animated class="bg-white">
           <q-tab-panel
             name="all"
@@ -139,13 +99,6 @@
             :style="{ height: size['height'] - 100 + 'px !important' }"
           >
             <q-list class="">
-              <q-item-label class="text-center q-pa-sm">
-                <q-input dense rounded outlined v-model="search">
-                  <template v-slot:append>
-                    <q-icon name="search" />
-                  </template>
-                </q-input>
-              </q-item-label>
               <q-item-label header class="text-center"
                 >{{ contacts_list.length }} CONTACTS</q-item-label
               >
@@ -156,40 +109,8 @@
                 @click="selected_contact = contact"
               >
                 <contact-item
-                  :avatar="contact.avatar"
                   :name="contact.name"
                   :position="contact.position"
-                ></contact-item>
-              </span>
-            </q-list>
-          </q-tab-panel>
-
-          <q-tab-panel
-            name="favorites"
-            class="q-pa-none"
-            :style="{ height: size['height'] - 80 + 'px !important' }"
-          >
-            <q-list class="">
-              <q-item-label class="text-center q-pa-sm">
-                <q-input dense rounded outlined v-model="search">
-                  <template v-slot:append>
-                    <q-icon name="search" />
-                  </template>
-                </q-input>
-              </q-item-label>
-              <q-item-label header class="text-center"
-                >{{ favorites_list.length }} Favorites</q-item-label
-              >
-
-              <span
-                v-for="(favorite, index) in favorites_list"
-                :key="index"
-                @click="selected_contact = favorite"
-              >
-                <contact-item
-                  :avatar="favorite.avatar"
-                  :name="favorite.name"
-                  :position="favorite.position"
                 ></contact-item>
               </span>
             </q-list>
@@ -200,13 +121,7 @@
             name="all"
             icon="person"
             class="text-capitalize"
-            label="All"
-          ></q-tab>
-          <q-tab
-            name="favorites"
-            icon="star"
-            class="text-capitalize"
-            label="Favorites"
+            label="我们"
           ></q-tab>
         </q-tabs>
       </div>
@@ -217,9 +132,9 @@
         >
           <q-toolbar class="text-black">
             <q-btn round flat class="q-pa-sm">
-              <q-avatar size="80px">
-                <img :src="selected_contact.avatar" />
-              </q-avatar>
+              <q-avatar size="80px" color="blue" text-color="white">
+                {{ selected_contact.name.charAt(0) }}</q-avatar
+              >
             </q-btn>
 
             <q-item class="q-subtitle-1 q-pl-md">
@@ -236,9 +151,6 @@
             </q-item>
 
             <q-space />
-
-            <q-btn round flat icon="star_outline" color="yellow"> </q-btn>
-            <q-btn round flat icon="edit" />
             <q-btn
               round
               flat
@@ -259,10 +171,10 @@
               :label="detail.label"
             ></contact-detail-item>
 
-            <q-separator
-              inset="item"
-              v-if="detail_index != detail_list.length - 1"
-            ></q-separator>
+            <!--            <q-separator-->
+            <!--              inset="item"-->
+            <!--              v-if="detail_index !== detail_list.length - 1"-->
+            <!--            ></q-separator>-->
           </div>
         </q-card>
       </transition>
@@ -274,137 +186,44 @@
 import { defineComponent, defineAsyncComponent } from "vue";
 import { useQuasar } from "quasar";
 import { ref } from "vue";
+import { all } from "src/api/contact";
 
 const detail_list = [
   {
     icon: "phone",
-    label: "Phone",
+    label: "电话号码",
     field: "phone",
     text_color: "blue",
   },
   {
     icon: "phone_iphone",
-    label: "Secondary Phone",
-    field: "secondary_phone",
+    label: "手机号码",
+    field: "secondaryPhone",
     text_color: "orange",
   },
   {
     icon: "mail",
-    label: "Personal Email",
-    field: "email",
+    label: "邮箱",
+    field: "personalEmail",
     text_color: "grey-8",
   },
   {
     icon: "business_center",
-    label: "Company Email",
-    field: "company_email",
+    label: "工作邮箱",
+    field: "companyEmail",
     text_color: "grey-8",
   },
   {
     icon: "location_on",
-    label: "Address",
+    label: "地址",
     field: "address",
     text_color: "grey-8",
   },
   {
     icon: "home_work",
-    label: "Website",
-    field: "website",
+    label: "个人网站",
+    field: "websiteUrl",
     text_color: "grey-8",
-  },
-];
-
-const contacts_list = [
-  {
-    name: "Pratik Patel",
-    position: "Developer",
-    avatar: "https://avatars2.githubusercontent.com/u/34883558?s=400&v=4",
-    email: "pratikpatelpp802@gmail.com",
-    company_email: "pratikpatelpp802@gmail.com",
-    website: "www.test.com",
-    phone: "+9910101010",
-    secondary_phone: "+9910101010",
-    address: "BB 101 Om Sai Residency Palsana",
-  },
-  {
-    name: "Razvan Stoenescu",
-    position: "Developer",
-    avatar: "https://cdn.quasar.dev/team/razvan_stoenescu.jpeg",
-    email: "mailto:razvan@quasar.dev",
-    company_email: "mailto:razvan@quasar.dev",
-    website: "https://github.com/rstoenescu",
-    phone: "+1-004-658-0042",
-    secondary_phone: "(331) 009-4655 x3147",
-    address: "92290 Lisa Cove",
-  },
-  {
-    name: "Jeff Galbraith",
-    position: "Developer",
-    avatar: "https://cdn.quasar.dev/team/jeff_galbraith.jpg",
-    email: "mailto:jeff@quasar.dev",
-    company_email: "mailto:jeff@quasar.dev",
-    website: "http://jeffgalbraith.dev/",
-    phone: "175.718.4633 x878",
-    secondary_phone: "175.718.4633 x878",
-    address: "Calgary, Canada",
-  },
-  {
-    name: "Brunhilde Panswick",
-    position: "Administrator",
-    avatar: "https://cdn.quasar.dev/img/avatar2.jpg",
-    email: "test.@quasar.dev",
-    company_email: "test.@quasar.dev",
-    website: "http://test1.dev/",
-    phone: "175.718.4633 x878",
-    secondary_phone: "175.718.4633 x878",
-    address: "Calgary, Canada",
-  },
-  {
-    name: "Winfield Stapforth",
-    position: "Administrator",
-    avatar: "https://cdn.quasar.dev/img/avatar6.jpg",
-    email: "test2.@quasar.dev",
-    company_email: "test.@quasar.dev",
-    website: "http://test2.dev/",
-    phone: "175.718.4633 x878",
-    secondary_phone: "175.718.4633 x878",
-    address: "Calgary, Canada",
-  },
-];
-
-const favorites_list = [
-  {
-    name: "Pratik Patel",
-    position: "Developer",
-    avatar: "https://avatars2.githubusercontent.com/u/34883558?s=400&v=4",
-    email: "pratikpatelpp802@gmail.com",
-    company_email: "pratikpatelpp802@gmail.com",
-    website: "www.test.com",
-    phone: "+9910101010",
-    secondary_phone: "+9910101010",
-    address: "BB 101 Om Sai Residency Palsana",
-  },
-  {
-    name: "Razvan Stoenescu",
-    position: "Developer",
-    avatar: "https://cdn.quasar.dev/team/razvan_stoenescu.jpeg",
-    email: "mailto:razvan@quasar.dev",
-    company_email: "mailto:razvan@quasar.dev",
-    website: "https://github.com/rstoenescu",
-    phone: "+1-004-658-0042",
-    secondary_phone: "(331) 009-4655 x3147",
-    address: "92290 Lisa Cove",
-  },
-  {
-    name: "Jeff Galbraith",
-    position: "Developer",
-    avatar: "https://cdn.quasar.dev/team/jeff_galbraith.jpg",
-    email: "mailto:jeff@quasar.dev",
-    company_email: "mailto:jeff@quasar.dev",
-    website: "http://jeffgalbraith.dev/",
-    phone: "175.718.4633 x878",
-    secondary_phone: "175.718.4633 x878",
-    address: "Calgary, Canada",
   },
 ];
 
@@ -424,9 +243,8 @@ export default defineComponent({
       tab: ref("all"),
       search: ref(""),
       size,
-      contacts_list,
-      favorites_list,
-      selected_contact: ref({}),
+      contacts_list: ref([]),
+      selected_contact: ref({ name: "" }),
       detail_list,
 
       onResize(size_dynamic) {
@@ -435,9 +253,10 @@ export default defineComponent({
     };
   },
   mounted() {
-    if (!this.$q.screen.lt.sm) {
+    all().then((res) => {
+      this.contacts_list = res.data;
       this.selected_contact = this.contacts_list[0];
-    }
+    });
   },
 });
 </script>

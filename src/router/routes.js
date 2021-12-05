@@ -43,10 +43,6 @@ const routes = [
         component: () => import("pages/admin/Tables.vue"),
       },
       {
-        path: "contact",
-        component: () => import("pages/admin/Contact.vue"),
-      },
-      {
         path: "checkout",
         component: () => import("pages/admin/Checkout.vue"),
       },

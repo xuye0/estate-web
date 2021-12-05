@@ -1,8 +1,8 @@
 <template>
   <q-item clickable>
     <q-item-section avatar>
-      <q-avatar>
-        <img :src="avatar" />
+      <q-avatar color="blue" text-color="white">
+        {{ name.charAt(0) }}
       </q-avatar>
     </q-item-section>
 
@@ -20,7 +20,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "ContactItem",
-  props: ["avatar", "name", "position"],
+  props: ["name", "position"],
 });
 </script>
 

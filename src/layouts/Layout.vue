@@ -180,6 +180,7 @@ export default {
     }
 
     function toggleLeftDrawer() {
+      console.log("/*?*/");
       leftDrawerOpen.value = !leftDrawerOpen.value;
     }
 
