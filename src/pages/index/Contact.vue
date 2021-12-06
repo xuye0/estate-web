@@ -22,7 +22,7 @@
                   @click="selected_contact = contact"
                 >
                   <contact-item
-                    :name="contact.name.charAt(0)"
+                    :name="contact.username.charAt(0)"
                     :position="contact.position"
                   ></contact-item>
                 </span>
@@ -48,7 +48,7 @@
           <q-toolbar class="text-black">
             <q-btn round flat class="q-pa-sm">
               <q-avatar size="80px" color="blue" text-color="white">
-                {{ selected_contact.name.charAt(0) }}</q-avatar
+                {{ selected_contact.username.charAt(0) }}</q-avatar
               >
             </q-btn>
 
@@ -109,7 +109,7 @@
                 @click="selected_contact = contact"
               >
                 <contact-item
-                  :name="contact.name"
+                  :name="contact.username"
                   :position="contact.position"
                 ></contact-item>
               </span>
@@ -133,7 +133,7 @@
           <q-toolbar class="text-black">
             <q-btn round flat class="q-pa-sm">
               <q-avatar size="80px" color="blue" text-color="white">
-                {{ selected_contact.name.charAt(0) }}</q-avatar
+                {{ selected_contact.username.charAt(0) }}</q-avatar
               >
             </q-btn>
 
@@ -244,7 +244,7 @@ export default defineComponent({
       search: ref(""),
       size,
       contacts_list: ref([]),
-      selected_contact: ref({ name: "" }),
+      selected_contact: ref({ username: "" }),
       detail_list,
 
       onResize(size_dynamic) {
