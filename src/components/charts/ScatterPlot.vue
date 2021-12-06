@@ -55,6 +55,9 @@ var data = [
     [53354, 79.1, 321773631, "United States", 2015],
   ],
 ];
+
+import * as echarts from "echarts";
+
 export default {
   name: "ScatterPlot",
   data() {
