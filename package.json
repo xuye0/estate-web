@@ -1,9 +1,9 @@
 {
-  "name": "test",
+  "name": "estate",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "Quasar App",
-  "author": "",
+  "productName": "Estate",
+  "author": "xuye",
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
