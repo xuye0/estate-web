@@ -177,10 +177,19 @@
             <q-item-label>Product Catalogues</q-item-label>
           </q-item-section>
         </q-item>
-        <q-expansion-item icon="menu_open" label="Menu Levels">
+        <q-expansion-item icon="menu_open" label="员工管理">
+          <q-item
+            to="/admin/staffList"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>员工列表</q-item-label>
+            </q-item-section>
+          </q-item>
           <q-item class="q-ml-xl" active-class="text-orange">
             <q-item-section>
-              <q-item-label>Level 1</q-item-label>
+              <q-item-label>添加员工</q-item-label>
             </q-item-section>
           </q-item>
           <q-expansion-item :header-inset-level="0.85" label="Level 2">

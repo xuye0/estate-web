@@ -74,6 +74,10 @@ const routes = [
         path: "cardHeader",
         component: () => import("pages/admin/CardHeader.vue"),
       },
+      {
+        path: "staffList",
+        component: () => import("pages/admin/staff/StaffList.vue"),
+      },
     ],
   },
 
