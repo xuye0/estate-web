@@ -515,6 +515,7 @@
 </template>
 
 <script>
+import * as echarts from "echarts";
 import { defineComponent, defineAsyncComponent, ref } from "vue";
 
 const messages = [
