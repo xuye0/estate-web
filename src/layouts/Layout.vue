@@ -201,7 +201,10 @@ export default {
         { icon: "star_border", text: "Favourites" },
         { icon: "search", text: "Saved searches" },
       ],
-      links2: [{ icon: "flag", text: "联系我们", to: "/contact" }],
+      links2: [
+        { icon: "flag", text: "联系我们", to: "/contact" },
+        { icon: "settings", text: "用户资料", to: "/settings" },
+      ],
       onClear,
       changeDate,
       toggleLeftDrawer,

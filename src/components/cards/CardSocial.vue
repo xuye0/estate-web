@@ -5,7 +5,7 @@
         <div
           v-for="(item, index) in items"
           :key="index"
-          class="col-md-3 col-sm-12 col-xs-12"
+          class="col-md-6 col-sm-12 col-xs-12"
         >
           <q-item :style="`background-color: ${item.color1}`" class="q-pa-none">
             <q-item-section
@@ -58,20 +58,7 @@ export default defineComponent({
               color1: "#5064b5",
               color2: "#3e51b5",
             },
-            {
-              title: "Followers",
-              icon: "fab fa-twitter",
-              value: "500",
-              color1: "#f37169",
-              color2: "#f34636",
-            },
-            {
-              title: "Connections",
-              icon: "fab fa-google",
-              value: "50",
-              color1: "#ea6a7f",
-              color2: "#ea4b64",
-            },
+
             {
               title: "Website Visits",
               icon: "bar_chart",

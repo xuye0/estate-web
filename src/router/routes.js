@@ -7,6 +7,10 @@ const routes = [
         path: "/contact",
         component: () => import("pages/index/Contact.vue"),
       },
+      {
+        path: "/settings",
+        component: () => import("pages/index/settings/"),
+      },
     ],
   },
   {
@@ -21,10 +25,6 @@ const routes = [
       {
         path: "dashboard2",
         component: () => import("pages/admin/Dashboard2.vue"),
-      },
-      {
-        path: "profile",
-        component: () => import("pages/admin/UserProfile.vue"),
       },
       {
         path: "mapMarker",

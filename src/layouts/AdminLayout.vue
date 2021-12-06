@@ -67,14 +67,6 @@
             <q-item-label header class="text-weight-bolder text-white"
               >Generic</q-item-label
             >
-            <q-item to="/admin/profile" active-class="text-orange">
-              <q-item-section avatar>
-                <q-icon name="person" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>User Profile</q-item-label>
-              </q-item-section>
-            </q-item>
             <q-item to="/maintenance" active-class="text-orange">
               <q-item-section avatar>
                 <q-icon name="settings" />
