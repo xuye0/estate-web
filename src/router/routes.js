@@ -88,10 +88,6 @@ const routes = [
     component: () => import("pages/Error404.vue"),
   },
   {
-    path: "/maintenance",
-    component: () => import("pages/Maintenance.vue"),
-  },
-  {
     path: "/welcome",
     component: () => import("pages/Welcome.vue"),
   },

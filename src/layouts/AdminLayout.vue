@@ -62,21 +62,6 @@
             <q-item-label>CRM Dashboard</q-item-label>
           </q-item-section>
         </q-item>
-        <q-expansion-item icon="pages" label="Pages">
-          <q-list class="q-pl-lg">
-            <q-item-label header class="text-weight-bolder text-white"
-              >Generic</q-item-label
-            >
-            <q-item to="/maintenance" active-class="text-orange">
-              <q-item-section avatar>
-                <q-icon name="settings" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Maintenance</q-item-label>
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </q-expansion-item>
 
         <q-item to="/admin/directory" active-class="text-orange">
           <q-item-section avatar>
