@@ -202,8 +202,8 @@ export default {
         { icon: "search", text: "Saved searches" },
       ],
       links2: [
-        { icon: "flag", text: "联系我们", to: "/contact" },
-        { icon: "settings", text: "用户资料", to: "/settings" },
+        { icon: "flag", text: "我的同事", to: "/contact" },
+        { icon: "settings", text: "个人资料", to: "/settings" },
       ],
       onClear,
       changeDate,

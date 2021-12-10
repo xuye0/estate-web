@@ -12,54 +12,57 @@
         </q-item>
         <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <q-item-section>
-            <q-input dense v-model="user_details.email" label="邮箱" />
+            <q-input dense v-model="user_details.position" label="岗位" />
+          </q-item-section>
+        </q-item>
+        <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <q-item-section>
+            <q-input dense v-model="user_details.phone" label="电话号码" />
           </q-item-section>
         </q-item>
         <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <q-item-section>
             <q-input
               dense
-              v-model="user_details.first_name"
-              label="First Name"
+              v-model="user_details.secondary_phone"
+              label="手机号码"
             />
           </q-item-section>
         </q-item>
         <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <q-item-section>
-            <q-input dense v-model="user_details.last_name" label="Last Name" />
+            <q-input
+              dense
+              v-model="user_details.personal_email"
+              label="个人邮箱"
+            />
           </q-item-section>
         </q-item>
-        <q-item class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <q-item-section>
+            <q-input
+              dense
+              v-model="user_details.company_email"
+              label="工作邮箱"
+            />
+          </q-item-section>
+        </q-item>
+        <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <q-item-section>
+            <q-input
+              dense
+              v-model="user_details.website_url"
+              label="个人主页"
+            />
+          </q-item-section>
+        </q-item>
+        <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <q-item-section>
             <q-input
               autogrow
               dense
               v-model="user_details.address"
-              label="Address"
-            />
-          </q-item-section>
-        </q-item>
-        <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <q-item-section>
-            <q-input dense v-model="user_details.city" label="City" />
-          </q-item-section>
-        </q-item>
-        <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <q-item-section>
-            <q-input
-              dense
-              v-model="user_details.post_code"
-              label="Postal Code"
-            />
-          </q-item-section>
-        </q-item>
-        <q-item class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <q-item-section>
-            <q-input
-              type="textarea"
-              dense
-              v-model="user_details.about"
-              label="About"
+              label="地址"
             />
           </q-item-section>
         </q-item>

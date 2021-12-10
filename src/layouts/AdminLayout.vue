@@ -169,35 +169,6 @@
               <q-item-label>添加员工</q-item-label>
             </q-item-section>
           </q-item>
-          <q-expansion-item :header-inset-level="0.85" label="Level 2">
-            <q-item
-              class="q-ml-xl"
-              style="margin-left: 55px !important"
-              active-class="text-orange"
-            >
-              <q-item-section>
-                <q-item-label>Level 2.1</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-expansion-item :header-inset-level="1" label="Level 2.2">
-              <q-item
-                style="margin-left: 65px !important"
-                active-class="text-orange"
-              >
-                <q-item-section>
-                  <q-item-label>Level 2.2.1</q-item-label>
-                </q-item-section>
-              </q-item>
-              <q-item
-                style="margin-left: 65px !important"
-                active-class="text-orange"
-              >
-                <q-item-section>
-                  <q-item-label>Level 2.2.2</q-item-label>
-                </q-item-section>
-              </q-item>
-            </q-expansion-item>
-          </q-expansion-item>
         </q-expansion-item>
       </q-list>
     </q-drawer>

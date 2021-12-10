@@ -36,27 +36,19 @@ import { all } from "src/api/contact";
 const columns = [
   {
     name: "id",
-    required: true,
     label: "id",
     align: "left",
-    field: (row) => row.id,
-    format: (val) => `${val}`,
+    field: "id",
     sortable: true,
   },
-  {
-    name: "username",
-    align: "center",
-    label: "用户名",
-    field: "username",
-    sortable: true,
-  },
+  { name: "username", label: "用户名", field: "username" },
   { name: "position", label: "岗位", field: "position" },
   { name: "phone", label: "电话号码", field: "phone" },
   { name: "secondaryPhone", label: "手机号码", field: "secondaryPhone" },
   { name: "personalEmail", label: "个人邮箱", field: "personalEmail" },
   { name: "companyEmail", label: "工作邮箱", field: "companyEmail" },
   { name: "address", label: "地址", field: "address" },
-  { name: "websiteUrl", label: "网站s", field: "websiteUrl" },
+  { name: "websiteUrl", label: "网站", field: "websiteUrl" },
 ];
 
 export default defineComponent({
@@ -69,7 +61,6 @@ export default defineComponent({
   created() {
     all().then((res) => {
       this.data = res.data;
-      console.log(this.data);
     });
   },
 

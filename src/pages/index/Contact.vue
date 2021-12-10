@@ -13,7 +13,7 @@
             >
               <q-list class="">
                 <q-item-label header class="text-center"
-                  >{{ contacts_list.length }} 位联系人</q-item-label
+                  >{{ contacts_list.length }} 位同事</q-item-label
                 >
 
                 <span
@@ -47,7 +47,12 @@
         >
           <q-toolbar class="text-black">
             <q-btn round flat class="q-pa-sm">
-              <q-avatar size="80px" color="blue" text-color="white">
+              <q-avatar
+                size="80px"
+                color="blue"
+                text-color="white"
+                v-if="selected_contact.username"
+              >
                 {{ selected_contact.username.charAt(0) }}</q-avatar
               >
             </q-btn>
@@ -67,7 +72,7 @@
 
             <q-space />
           </q-toolbar>
-          <q-separator></q-separator>
+          <q-separator v-if="selected_contact.username"></q-separator>
 
           <div
             v-for="(detail, detail_index) in detail_list"
@@ -80,18 +85,18 @@
               :label="detail.label"
             >
             </contact-detail-item>
-
-            <!--            <q-separator-->
-            <!--              inset="item"-->
-            <!--              v-if="detail_index !== detail_list.length - 1"-->
-            <!--            ></q-separator>-->
           </div>
         </q-card>
       </div>
     </div>
 
     <div v-else>
-      <div v-if="Object.keys(selected_contact).length === 0">
+      <div
+        v-if="
+          Object.keys(selected_contact).length === 0 ||
+          Object.keys(selected_contact).length === 1
+        "
+      >
         <q-tab-panels v-model="tab" animated class="bg-white">
           <q-tab-panel
             name="all"
@@ -170,11 +175,6 @@
               :value="selected_contact[detail['field']]"
               :label="detail.label"
             ></contact-detail-item>
-
-            <!--            <q-separator-->
-            <!--              inset="item"-->
-            <!--              v-if="detail_index !== detail_list.length - 1"-->
-            <!--            ></q-separator>-->
           </div>
         </q-card>
       </transition>
@@ -255,7 +255,6 @@ export default defineComponent({
   mounted() {
     all().then((res) => {
       this.contacts_list = res.data;
-      this.selected_contact = this.contacts_list[0];
     });
   },
 });
