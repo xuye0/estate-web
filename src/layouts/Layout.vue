@@ -195,12 +195,7 @@ export default {
       byWebsite,
       byDate,
 
-      links1: [
-        { icon: "web", text: "Top stories" },
-        { icon: "person", text: "For you" },
-        { icon: "star_border", text: "Favourites" },
-        { icon: "search", text: "Saved searches" },
-      ],
+      links1: [{ icon: "today", text: "日历", to: "/calendar" }],
       links2: [
         { icon: "flag", text: "我的同事", to: "/contact" },
         { icon: "settings", text: "个人资料", to: "/settings" },

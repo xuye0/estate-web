@@ -128,16 +128,6 @@
             <q-item-label>Checkout</q-item-label>
           </q-item-section>
         </q-item>
-
-        <q-item to="/admin/calendar" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="date_range" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Calendar</q-item-label>
-          </q-item-section>
-        </q-item>
-
         <q-item to="/admin/pagination" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="date_range" />

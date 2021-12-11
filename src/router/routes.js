@@ -4,6 +4,10 @@ const routes = [
     component: () => import("layouts/Layout.vue"),
     children: [
       {
+        path: "/calendar",
+        component: () => import("pages/index/calendar"),
+      },
+      {
         path: "/contact",
         component: () => import("pages/index/Contact.vue"),
       },
@@ -57,10 +61,6 @@ const routes = [
       {
         path: "charts",
         component: () => import("pages/admin/Charts.vue"),
-      },
-      {
-        path: "calendar",
-        component: () => import("pages/admin/Calendar.vue"),
       },
       {
         path: "directory",
