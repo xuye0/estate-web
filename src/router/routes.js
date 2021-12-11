@@ -4,6 +4,10 @@ const routes = [
     component: () => import("layouts/Layout.vue"),
     children: [
       {
+        path: "/announcement",
+        component: () => import("pages/index/announcement"),
+      },
+      {
         path: "/calendar",
         component: () => import("pages/index/calendar"),
       },

@@ -194,8 +194,10 @@ export default {
       excludeWords,
       byWebsite,
       byDate,
-
-      links1: [{ icon: "today", text: "日历", to: "/calendar" }],
+      links1: [
+        { icon: "campaign", text: "公告", to: "/announcement" },
+        { icon: "today", text: "日历", to: "/calendar" },
+      ],
       links2: [
         { icon: "flag", text: "我的同事", to: "/contact" },
         { icon: "settings", text: "个人资料", to: "/settings" },
