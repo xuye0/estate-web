@@ -35,6 +35,10 @@ const routes = [
         component: () => import("pages/admin/Dashboard2.vue"),
       },
       {
+        path: "announcement",
+        component: () => import("pages/admin/announcement"),
+      },
+      {
         path: "mapMarker",
         component: () => import("pages/admin/MapMarker.vue"),
       },

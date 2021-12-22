@@ -1,10 +1,5 @@
 <template>
-  <div>
-    <h2 v-text="this.data.title" class="text-center"></h2>
-    <q-card>
-      <div v-html="this.data.html"></div>
-    </q-card>
-  </div>
+  <div>{{ this.data }}</div>
 </template>
 
 <script>

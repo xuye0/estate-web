@@ -63,6 +63,14 @@
             <q-item-label>CRM Dashboard</q-item-label>
           </q-item-section>
         </q-item>
+        <q-item to="/admin/announcement" active-class="text-orange">
+          <q-item-section avatar>
+            <q-icon name="dashboard" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>announcement</q-item-label>
+          </q-item-section>
+        </q-item>
 
         <q-item to="/admin/directory" active-class="text-orange">
           <q-item-section avatar>
