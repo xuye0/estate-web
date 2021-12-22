@@ -16,7 +16,7 @@
           v-model="selectedDate"
           show-day-of-year-label
           :day-min-height="60"
-          animated
+          animatedh
           bordered
           @change="onChange"
           @moved="onMoved"

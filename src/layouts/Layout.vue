@@ -36,6 +36,9 @@
             @click="$q.fullscreen.toggle()"
             v-if="$q.screen.gt.sm"
           >
+            <q-tooltip>{{
+              !$q.fullscreen.isActive ? "全屏" : "退出全屏"
+            }}</q-tooltip>
           </q-btn>
           <q-btn
             to="/welcome"
@@ -48,6 +51,7 @@
           >
             <q-tooltip>欢迎页面</q-tooltip>
           </q-btn>
+          <Palette></Palette>
           <q-btn
             to="/admin"
             v-if="$q.screen.gt.sm"
@@ -151,10 +155,11 @@
 import { ref } from "vue";
 import { fasGlobeAmericas, fasFlask } from "@quasar/extras/fontawesome-v5";
 import Avatar from "components/avatar/Avatar";
+import Palette from "components/Palette";
 
 export default {
   name: "GoogleNewsLayout",
-  components: { Avatar },
+  components: { Palette, Avatar },
   setup() {
     const leftDrawerOpen = ref(false);
     const search = ref("");

@@ -23,6 +23,7 @@
             v-if="$q.screen.gt.sm"
           >
           </q-btn>
+          <Palette></Palette>
           <q-btn
             to="/"
             v-if="$q.screen.gt.sm"
@@ -174,11 +175,13 @@ import Messages from "layouts/Messages";
 
 import { defineComponent, ref } from "vue";
 import Avatar from "components/avatar/Avatar";
+import Palette from "components/Palette";
 
 export default defineComponent({
   name: "MainLayout",
 
   components: {
+    Palette,
     Avatar,
     Messages,
   },
