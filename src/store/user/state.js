@@ -1,9 +1,9 @@
 export default function () {
   return {
-    id: "",
-    token: "",
-    username: "",
-    avatar_url: "",
+    id: undefined,
+    token: undefined,
+    username: undefined,
+    avatar_url: undefined,
     is_authenticated: false,
     is_administrator: false,
   };

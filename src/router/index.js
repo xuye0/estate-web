@@ -39,8 +39,8 @@ const Router = createRouter({
 
 Router.beforeEach((to, from, next) => {
   // login和welcome路由免认证
-  const { user } = store().state;
-  if (to.path === "/login" || to.path === "/welcome") {
+  const { user } = store.state;
+  if (to.name === "login" || to.path === "/welcome") {
     next();
   } else {
     //未认证的必须认证
