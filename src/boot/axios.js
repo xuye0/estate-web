@@ -1,6 +1,7 @@
 import { boot } from "quasar/wrappers";
 import axios from "axios";
 import { Notify } from "quasar";
+import Router from "src/router";
 
 const api = axios.create({ baseURL: "/api" });
 
@@ -16,21 +17,32 @@ export default boot(({ app }) => {
   //       so you can easily perform requests against your app's API
 
   api.interceptors.response.use(
-    (res) => {
-      if (res.data.code === 1000) {
+    function (response) {
+      if (response.data.code === 4000) {
+        Router.push({ name: "login" });
+      }
+      if (response.data.code === 1001) {
         Notify.create({
+          message: response.data.data,
+          type: "negative",
+        });
+      }
+      if (response.data.code === 1000) {
+        Notify.create({
+          message: "成功 ~ ",
           type: "positive",
-          message: `成功 ~ `,
+          color: "primary",
+          badgeColor: "secondary",
           timeout: 1,
         });
       }
-      if (res.data.code === 1001) {
-        Notify.create({ type: "negative", message: res.data.data });
-      }
-      return res.data;
+      // Any status code that lie within the range of 2xx cause this function to trigger
+      // Do something with response data
+      return response.data;
     },
-    (error) => {
-      console.log(error);
+    function (error) {
+      // Any status codes that falls outside the range of 2xx cause this function to trigger
+      // Do something with response error
       return Promise.reject(error);
     }
   );

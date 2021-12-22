@@ -101,6 +101,7 @@ const routes = [
   },
   {
     path: "/login",
+    name: "login",
     component: () => import("pages/Login-1.vue"),
   },
 ];
