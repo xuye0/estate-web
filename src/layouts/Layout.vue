@@ -201,6 +201,7 @@ export default {
       byDate,
       links1: [
         { icon: "campaign", text: "公告", to: "/announcement" },
+        { icon: "newspaper", text: "新闻", to: "/news" },
         { icon: "today", text: "日历", to: "/calendar" },
       ],
       links2: [

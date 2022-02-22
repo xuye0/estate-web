@@ -8,6 +8,10 @@ const routes = [
         component: () => import("pages/index/announcement"),
       },
       {
+        path: "/news",
+        component: () => import("pages/index/news"),
+      },
+      {
         path: "/calendar",
         component: () => import("pages/index/calendar"),
       },
