@@ -31,7 +31,7 @@
 
 <script>
 import { defineComponent, ref } from "vue";
-import { all } from "src/api/contact";
+import { all_staff } from "src/api/staff";
 
 const columns = [
   {
@@ -59,7 +59,7 @@ export default defineComponent({
     };
   },
   created() {
-    all().then((res) => {
+    all_staff().then((res) => {
       this.data = res.data;
     });
   },

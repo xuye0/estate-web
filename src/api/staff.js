@@ -1,8 +1,8 @@
 import { api } from "boot/axios";
 
-export function all() {
+export function all_staff() {
   return api({
-    url: "/user",
+    url: "/staff",
     method: "get",
   });
 }

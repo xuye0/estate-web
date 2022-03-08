@@ -186,7 +186,7 @@
 import { defineComponent, defineAsyncComponent } from "vue";
 import { useQuasar } from "quasar";
 import { ref } from "vue";
-import { all } from "src/api/contact";
+import { all_staff } from "src/api/staff";
 
 const detail_list = [
   {
@@ -253,7 +253,7 @@ export default defineComponent({
     };
   },
   mounted() {
-    all().then((res) => {
+    all_staff().then((res) => {
       this.contacts_list = res.data;
     });
   },
