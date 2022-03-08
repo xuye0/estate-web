@@ -90,6 +90,10 @@ const routes = [
         path: "staffList",
         component: () => import("pages/admin/staff/StaffList.vue"),
       },
+      {
+        path: "staffAdd",
+        component: () => import("pages/admin/staff/StaffAdd.vue"),
+      },
     ],
   },
 

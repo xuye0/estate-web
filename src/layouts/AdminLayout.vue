@@ -163,7 +163,12 @@
               <q-item-label>员工列表</q-item-label>
             </q-item-section>
           </q-item>
-          <q-item class="q-ml-xl" active-class="text-orange">
+
+          <q-item
+            to="/admin/staffAdd"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
             <q-item-section>
               <q-item-label>添加员工</q-item-label>
             </q-item-section>
