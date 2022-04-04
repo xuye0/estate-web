@@ -48,7 +48,7 @@ const columns = [
   { name: "personalEmail", label: "个人邮箱", field: "personalEmail" },
   { name: "companyEmail", label: "工作邮箱", field: "companyEmail" },
   { name: "address", label: "地址", field: "address" },
-  { name: "websiteUrl", label: "网站", field: "websiteUrl" },
+  { name: "websiteUrl", label: "个人主页", field: "websiteUrl" },
 ];
 
 export default defineComponent({

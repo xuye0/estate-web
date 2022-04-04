@@ -21,3 +21,11 @@ export function update_me(data) {
     data,
   });
 }
+
+export function add_staff(data) {
+  return api({
+    url: "/staff",
+    method: "post",
+    data,
+  });
+}

@@ -3,10 +3,27 @@
     <q-card-section class="text-h6 q-pa-sm">
       <div class="text-h6">添加员工</div>
     </q-card-section>
+    <q-card-section class="q-pa-sm row">
+      <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+        <q-item-section> 用户id </q-item-section>
+      </q-item>
+      <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
+        <q-item-section>
+          <q-input
+            type="input"
+            dense
+            outlined
+            round
+            v-model="form.userId"
+            label="用户id"
+          />
+        </q-item-section>
+      </q-item>
+    </q-card-section>
 
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> username </q-item-section>
+        <q-item-section> 用户名 </q-item-section>
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
@@ -24,7 +41,7 @@
 
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> postition </q-item-section>
+        <q-item-section> 岗位 </q-item-section>
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
@@ -34,7 +51,7 @@
             outlined
             round
             v-model="form.position"
-            label="position"
+            label="岗位"
           />
         </q-item-section>
       </q-item>
@@ -42,7 +59,7 @@
 
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> phone </q-item-section>
+        <q-item-section> 电话号码 </q-item-section>
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
@@ -52,7 +69,7 @@
             outlined
             round
             v-model="form.phone"
-            label="phone"
+            label="电话号码"
           />
         </q-item-section>
       </q-item>
@@ -60,7 +77,7 @@
 
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> secondary_phone </q-item-section>
+        <q-item-section> 手机号码 </q-item-section>
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
@@ -69,8 +86,8 @@
             dense
             outlined
             round
-            v-model="form.secondary_phone"
-            label="secondary_phone"
+            v-model="form.secondaryPhone"
+            label="手机号码"
           />
         </q-item-section>
       </q-item>
@@ -78,7 +95,7 @@
 
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> personal_email </q-item-section>
+        <q-item-section> 个人邮箱 </q-item-section>
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
@@ -87,8 +104,8 @@
             dense
             outlined
             round
-            v-model="form.personal_email"
-            label="personal_email"
+            v-model="form.personalEmail"
+            label="个人邮箱"
           />
         </q-item-section>
       </q-item>
@@ -96,7 +113,7 @@
 
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> company_email </q-item-section>
+        <q-item-section> 工作邮箱 </q-item-section>
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
@@ -105,8 +122,8 @@
             dense
             outlined
             round
-            v-model="form.company_email"
-            label="company_email"
+            v-model="form.companyEmail"
+            label="工作邮箱"
           />
         </q-item-section>
       </q-item>
@@ -114,7 +131,7 @@
 
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> address </q-item-section>
+        <q-item-section> 地址 </q-item-section>
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
@@ -124,7 +141,7 @@
             outlined
             round
             v-model="form.address"
-            label="address"
+            label="地址"
           />
         </q-item-section>
       </q-item>
@@ -132,7 +149,7 @@
 
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> website_url </q-item-section>
+        <q-item-section> 个人主页 </q-item-section>
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
@@ -141,8 +158,8 @@
             dense
             outlined
             round
-            v-model="form.website_url"
-            label="website_url"
+            v-model="form.websiteUrl"
+            label="个人主页"
           />
         </q-item-section>
       </q-item>
@@ -155,25 +172,28 @@
 </template>
 
 <script>
+import { add_staff } from "src/api/staff";
+
 export default {
   name: "StaffAdd",
   methods: {
     handleSubmit() {
-      console.log(this.form);
+      add_staff(this.form);
     },
   },
   data() {
     return {
       form: {
         id: undefined,
+        userId: undefined,
         username: undefined,
         position: undefined,
         phone: undefined,
-        secondary_phone: undefined,
-        personal_email: undefined,
-        company_email: undefined,
+        secondaryPhone: undefined,
+        personalEmail: undefined,
+        companyEmail: undefined,
         address: undefined,
-        website_url: undefined,
+        websiteUrl: undefined,
       },
     };
   },
