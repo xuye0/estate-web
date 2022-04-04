@@ -43,7 +43,7 @@ const columns = [
   },
   { name: "address", label: "地址", field: "address" },
   { name: "name", label: "房产名称", field: "name" },
-  { name: "city", label: "城市", field: "city" },
+  { name: "cityId", label: "城市id", field: "cityId" },
   { name: "type", label: "类型", field: "type" },
   { name: "price", label: "价格", field: "price" },
   { name: "websiteUrl", label: "链接", field: "websiteUrl" },

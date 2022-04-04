@@ -58,7 +58,7 @@
               dense
               outlined
               round
-              v-model="model.city"
+              v-model="model.cityId"
               label="城市"
             />
           </q-item-section>
@@ -149,7 +149,7 @@ export default {
       model: {
         id: undefined,
         name: undefined,
-        city: undefined,
+        cityId: undefined,
         address: undefined,
         type: undefined,
         price: undefined,
@@ -159,7 +159,7 @@ export default {
         {
           id: undefined,
           name: undefined,
-          city: undefined,
+          cityId: undefined,
           address: undefined,
           type: undefined,
           price: undefined,

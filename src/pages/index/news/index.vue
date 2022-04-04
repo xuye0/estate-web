@@ -2,14 +2,13 @@
   <div class="q-px-lg q-pb-md">
     <q-timeline color="secondary">
       <q-timeline-entry heading> 房产资讯</q-timeline-entry>
-
       <q-timeline-entry
         :title="item.title"
         :subtitle="item.date"
         v-for="(item, index) in this.list"
         :key="index"
       >
-        <div>{{ item.html }}</div>
+        <div v-html="item.html"></div>
       </q-timeline-entry>
     </q-timeline>
   </div>

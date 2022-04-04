@@ -44,12 +44,15 @@
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
-          <q-input
-            type="input"
+          <q-select
             dense
             outlined
             round
-            v-model="form.city"
+            v-model="form.cityId"
+            :options="city_options"
+            option-label="name"
+            option-value="id"
+            emit-value
             label="城市"
           />
         </q-item-section>
@@ -118,9 +121,15 @@
 
 <script>
 import { add_estate } from "src/api/estate";
+import { citys } from "src/api/city";
 
 export default {
   name: "estateAdd",
+  created() {
+    citys().then((res) => {
+      this.city_options = res.data;
+    });
+  },
   methods: {
     handleSubmit() {
       add_estate(this.form);
@@ -128,10 +137,11 @@ export default {
   },
   data() {
     return {
+      city_options: {},
       form: {
         id: undefined,
         name: undefined,
-        city: undefined,
+        cityId: undefined,
         address: undefined,
         type: undefined,
         price: undefined,
