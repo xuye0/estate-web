@@ -21,7 +21,7 @@
       </div>
     </q-card-section>
     <q-card-actions vertical align="center">
-      <q-btn outline class="text-capitalize">Buy Now</q-btn>
+      <!--      <q-btn outline class="text-capitalize">开始</q-btn>-->
     </q-card-actions>
   </q-card>
 </template>

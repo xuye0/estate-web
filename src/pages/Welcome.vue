@@ -5,22 +5,8 @@
   >
     <q-header class="bg-transparent text-white">
       <q-toolbar class="q-pa-md">
-        <q-toolbar-title> Pricing Page </q-toolbar-title>
+        <q-toolbar-title>必看好房，周周上新</q-toolbar-title>
         <q-space />
-
-        <div class="q-gutter-sm row items-center no-wrap">
-          <q-btn
-            square
-            dense
-            flat
-            color="text-grey-7"
-            to="/"
-            label="首页"
-            icon="home"
-          >
-            <q-tooltip>首页</q-tooltip>
-          </q-btn>
-        </div>
       </q-toolbar>
     </q-header>
 
@@ -30,10 +16,8 @@
         class="flex text-white flex-center layout_bg"
       >
         <div style="position: relative">
-          <div class="text-h4 text-center">Pick the best plan for you</div>
-          <div class="text-subtitle2 q-pt-sm text-center">
-            You have Free Unlimited Updates and Premium Support on each package.
-          </div>
+          <div class="text-h1 text-center">连接每个家的故事</div>
+          <div class="text-h5 text-center">在售新房楼盘 795 个</div>
         </div>
       </section>
       <section class="q-pb-lg">
@@ -54,11 +38,17 @@
       </section>
     </q-page-container>
 
+    <div class="text-center">
+      <q-btn square flat color="grey" to="/" label="首页" icon="home"> </q-btn>
+    </div>
+
     <section class="flex row flex-center q-py-sm">
-      <div class="text-weight-bold text-subtitle2 text-white">
-        Copyright © {{ year }}, made with
+      <div
+        class="text-weight-bold text-subtitle2 text-white fixed-bottom text-center"
+      >
+        Copyright © {{ year }}
         <q-icon name="fas fa-heart"></q-icon>
-        by Pratik Patel
+        xuye
       </div>
     </section>
   </q-layout>
@@ -69,33 +59,33 @@ import { defineComponent, defineAsyncComponent } from "vue";
 
 const pricing_data = [
   {
-    title: "Basic",
-    price: "$0",
+    title: "二手好房",
+    price: "涨幅2%",
     icon: "home_work",
     background_image: "linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%)",
-    text: "This is good if your company size is between 2 and 10 Persons.",
+    text: "好房源那么多，我们为你精选",
   },
   {
-    title: "Small Company",
-    price: "$25",
+    title: "小区",
+    price: "本月新增26个",
     icon: "home",
     background_image: "linear-gradient(-225deg, #5D9FFF 0%, #6BBBFF 100%)",
-    text: "This is good if your company size is between 2 and 10 Persons.",
+    text: "纵览小区恋上这座城",
   },
   {
-    title: "Extended",
-    price: "$250",
+    title: "新房",
+    price: "均价¥54390/平",
     icon: "apartment",
     background_image: "linear-gradient(to right, #2B86C5 0%, #2B86C5 100%)",
-    text: "This is good if your company size is between 2 and 10 Persons.",
+    text: "真实信息准确同步，楼盘动态一手掌握",
   },
   {
-    title: "Extra Pack",
-    price: "$750",
+    title: "海外房产",
+    price: "$350 ~ $750/套",
     icon: "business_center",
     background_image:
       "linear-gradient(87deg, rgb(17, 205, 239), rgb(17, 113, 239)) !important",
-    text: "This is good if your company size is between 2 and 10 Persons.",
+    text: "海量全球好房，畅享美好生活",
   },
 ];
 export default defineComponent({
