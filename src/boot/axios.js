@@ -33,7 +33,13 @@ export default boot(({ app }) => {
           type: "positive",
           color: "primary",
           badgeColor: "secondary",
-          timeout: 1,
+        });
+      }
+      if (response.data.code === 1002) {
+        Notify.create({
+          message: response.data.data,
+          type: "negative",
+          timeout: 10000,
         });
       }
       // Any status code that lie within the range of 2xx cause this function to trigger

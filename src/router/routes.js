@@ -94,6 +94,30 @@ const routes = [
         path: "staffAdd",
         component: () => import("pages/admin/staff/StaffAdd.vue"),
       },
+      {
+        path: "staffRemove",
+        component: () => import("pages/admin/staff/StaffRemove.vue"),
+      },
+      {
+        path: "staffEdit",
+        component: () => import("pages/admin/staff/StaffEdit.vue"),
+      },
+      {
+        path: "estateList",
+        component: () => import("pages/admin/estate/EstateList.vue"),
+      },
+      {
+        path: "estateAdd",
+        component: () => import("pages/admin/estate/EstateAdd.vue"),
+      },
+      {
+        path: "estateRemove",
+        component: () => import("pages/admin/estate/EstateRemove.vue"),
+      },
+      {
+        path: "estateEdit",
+        component: () => import("pages/admin/estate/EstateEdit.vue"),
+      },
     ],
   },
 

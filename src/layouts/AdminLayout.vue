@@ -163,7 +163,6 @@
               <q-item-label>员工列表</q-item-label>
             </q-item-section>
           </q-item>
-
           <q-item
             to="/admin/staffAdd"
             class="q-ml-xl"
@@ -171,6 +170,63 @@
           >
             <q-item-section>
               <q-item-label>添加员工</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/staffRemove"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>删除员工</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/staffEdit"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>更新员工</q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-expansion-item>
+        <q-expansion-item icon="menu_open" label="楼盘管理">
+          <q-item
+            to="/admin/estateList"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>楼盘列表</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-item
+            to="/admin/estateAdd"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>添加楼盘</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/estateRemove"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>删除楼盘</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/estateEdit"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>编辑楼盘</q-item-label>
             </q-item-section>
           </q-item>
         </q-expansion-item>

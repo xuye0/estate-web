@@ -29,3 +29,18 @@ export function add_staff(data) {
     data,
   });
 }
+
+export function remove_staff(id) {
+  return api({
+    url: `/staff/${id}`,
+    method: "delete",
+  });
+}
+
+export function edit_staff(data) {
+  return api({
+    url: "/staff/",
+    method: "put",
+    data,
+  });
+}
