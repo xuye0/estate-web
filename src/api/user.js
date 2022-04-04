@@ -15,3 +15,11 @@ export function logout() {
     method: "delete",
   });
 }
+
+export function change_password(oldPassword, newPassword) {
+  return api({
+    url: "/session",
+    method: "put",
+    data: qs.stringify({ oldPassword, newPassword }),
+  });
+}

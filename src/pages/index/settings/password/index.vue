@@ -14,7 +14,7 @@
             dense
             outlined
             round
-            v-model="password_dict.current_password"
+            v-model="password_info.oldPassword"
             label="当前密码"
           />
         </q-item-section>
@@ -29,7 +29,7 @@
             dense
             outlined
             round
-            v-model="password_dict.new_password"
+            v-model="password_info.newPassword"
             label="新密码"
           />
         </q-item-section>
@@ -44,25 +44,48 @@
             dense
             outlined
             round
-            v-model="password_dict.confirm_new_password"
+            v-model="password_info.confirmNewPassword"
             label="确认新密码"
           />
         </q-item-section>
       </q-item>
     </q-card-section>
     <q-card-actions align="right">
-      <q-btn color="primary">修改密码 </q-btn>
+      <q-btn color="primary" @click="handleChangePassword()">修改密码 </q-btn>
     </q-card-actions>
   </div>
 </template>
 
 <script>
+import { change_password } from "src/api/user";
+
 export default {
   name: "SettingsPassword",
   data() {
     return {
-      password_dict: {},
+      password_info: {
+        oldPassword: undefined,
+        newPassword: undefined,
+        confirmNewPassword: undefined,
+      },
     };
+  },
+  methods: {
+    handleChangePassword() {
+      if (
+        this.password_info.newPassword !== this.password_info.confirmNewPassword
+      ) {
+        this.$q.notify({
+          color: "negative",
+          message: "两次输入的新密码不一致",
+        });
+        return;
+      }
+      change_password(
+        this.password_info.oldPassword,
+        this.password_info.newPassword
+      );
+    },
   },
 };
 </script>

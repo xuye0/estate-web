@@ -7,7 +7,7 @@
       <q-list class="row">
         <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <q-item-section>
-            <q-input dense v-model="user_details.user_name" label="用户名" />
+            <q-input dense v-model="user_details.username" label="用户名" />
           </q-item-section>
         </q-item>
         <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -24,7 +24,7 @@
           <q-item-section>
             <q-input
               dense
-              v-model="user_details.secondary_phone"
+              v-model="user_details.secondaryPhone"
               label="手机号码"
             />
           </q-item-section>
@@ -33,7 +33,7 @@
           <q-item-section>
             <q-input
               dense
-              v-model="user_details.personal_email"
+              v-model="user_details.personalEmail"
               label="个人邮箱"
             />
           </q-item-section>
@@ -42,18 +42,14 @@
           <q-item-section>
             <q-input
               dense
-              v-model="user_details.company_email"
+              v-model="user_details.companyEmail"
               label="工作邮箱"
             />
           </q-item-section>
         </q-item>
         <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <q-item-section>
-            <q-input
-              dense
-              v-model="user_details.website_url"
-              label="个人主页"
-            />
+            <q-input dense v-model="user_details.websiteUrl" label="个人主页" />
           </q-item-section>
         </q-item>
         <q-item class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -69,18 +65,44 @@
       </q-list>
     </q-card-section>
     <q-card-actions align="right">
-      <q-btn color="primary">修改个人信息</q-btn>
+      <q-btn color="primary" @click="handleUpdate()">修改个人信息</q-btn>
     </q-card-actions>
   </div>
 </template>
 
 <script>
+import { me, update_me } from "src/api/staff";
+
 export default {
   name: "SettingsProfile",
   data() {
     return {
-      user_details: {},
+      user_details: {
+        username: undefined,
+        position: undefined,
+        phone: undefined,
+        secondaryPhone: undefined,
+        personalEmail: undefined,
+        companyEmail: undefined,
+        websiteUrl: undefined,
+        address: undefined,
+      },
     };
+  },
+  mounted() {
+    this.fetch_data();
+  },
+  methods: {
+    fetch_data() {
+      me().then((response) => {
+        this.user_details = response.data;
+      });
+    },
+    handleUpdate() {
+      update_me(this.user_details).then(() => {
+        this.fetch_data();
+      });
+    },
   },
 };
 </script>

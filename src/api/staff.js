@@ -6,3 +6,18 @@ export function all_staff() {
     method: "get",
   });
 }
+
+export function me() {
+  return api({
+    url: "/staff/me",
+    method: "get",
+  });
+}
+
+export function update_me(data) {
+  return api({
+    url: "/staff/me",
+    method: "put",
+    data,
+  });
+}

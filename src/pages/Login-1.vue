@@ -12,24 +12,24 @@
           </q-card-section>
           <q-card-section>
             <div class="text-center q-pt-lg">
-              <div class="col text-h6 ellipsis">Log in</div>
+              <div class="col text-h6 ellipsis">楼盘信息统计系统-登录</div>
             </div>
           </q-card-section>
           <q-card-section>
             <q-form class="q-gutter-md">
-              <q-input filled v-model="this.id" label="Username" lazy-rules />
+              <q-input filled v-model="this.id" label="用户" lazy-rules />
 
               <q-input
                 type="password"
                 filled
                 v-model="this.password"
-                label="Password"
+                label="密码"
                 lazy-rules
               />
 
               <div>
                 <q-btn
-                  label="Login"
+                  label="登录"
                   @click="handleLogin()"
                   type="button"
                   color="primary"
