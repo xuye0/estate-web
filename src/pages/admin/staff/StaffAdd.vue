@@ -1,7 +1,7 @@
 <template>
   <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <q-card-section class="text-h6 q-pa-sm">
-      <div class="text-h6">添加员工</div>
+      <div class="text-h6" style="background-color: limegreen">添加员工</div>
     </q-card-section>
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
@@ -166,7 +166,7 @@
     </q-card-section>
 
     <q-card-actions align="right">
-      <q-btn color="primary" @click="this.handleSubmit()">提交员工 </q-btn>
+      <q-btn color="green" @click="this.handleSubmit()">提交员工 </q-btn>
     </q-card-actions>
   </div>
 </template>

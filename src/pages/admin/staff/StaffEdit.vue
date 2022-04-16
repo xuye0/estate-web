@@ -1,7 +1,9 @@
 <template>
   <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <q-card-section class="text-h6 q-pa-sm">
-      <div class="text-h6">编辑员工</div>
+      <div class="text-h6">
+        <div style="background-color: grey">更新员工</div>
+      </div>
     </q-card-section>
 
     <q-select
@@ -9,7 +11,7 @@
       v-model="model"
       :options="list"
       option-label="address"
-      label="选择楼盘"
+      label="选择员工"
     />
 
     <div v-if="this.model.id !== undefined">
@@ -168,7 +170,7 @@
         </q-item>
       </q-card-section>
       <q-card-actions align="right">
-        <q-btn color="red" @click="this.handleEdit()">更新楼盘 </q-btn>
+        <q-btn color="grey" @click="this.handleEdit()">更新员工 </q-btn>
       </q-card-actions>
     </div>
   </div>

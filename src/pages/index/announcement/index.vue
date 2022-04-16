@@ -1,6 +1,9 @@
 <template>
   <div>
     <h2 v-text="this.data.title" class="text-center"></h2>
+    <div class="text-center">
+      <q-badge rounded color="primary" :label="this.data.updateTime" />
+    </div>
     <q-card>
       <div v-html="this.data.html"></div>
     </q-card>

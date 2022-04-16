@@ -1,7 +1,9 @@
 <template>
   <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <q-card-section class="text-h6 q-pa-sm">
-      <div class="text-h6">移除员工</div>
+      <div class="text-h6">
+        <div style="background-color: indianred">移除员工</div>
+      </div>
     </q-card-section>
 
     <q-select
