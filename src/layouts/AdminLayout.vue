@@ -79,16 +79,16 @@
             active-class="text-orange"
           >
             <q-item-section>
-              <q-item-label>资讯发布</q-item-label>
+              <q-item-label>发布</q-item-label>
             </q-item-section>
           </q-item>
           <q-item
-            to="/admin/staffRemove"
+            to="/admin/newsUpdate"
             class="q-ml-xl"
             active-class="text-orange"
           >
             <q-item-section>
-              <q-item-label>删除员工</q-item-label>
+              <q-item-label>更新/删除</q-item-label>
             </q-item-section>
           </q-item>
         </q-expansion-item>

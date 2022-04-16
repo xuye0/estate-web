@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { news } from "src/api/news";
+import { news_list } from "src/api/news_list";
 
 export default {
   name: "index",
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     fetch_data() {
-      news().then((res) => {
+      news_list().then((res) => {
         this.list = res.data;
       });
     },

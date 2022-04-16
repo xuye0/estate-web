@@ -47,6 +47,10 @@ const routes = [
         component: () => import("pages/admin/news/Add"),
       },
       {
+        path: "newsUpdate",
+        component: () => import("pages/admin/news/Update"),
+      },
+      {
         path: "mapMarker",
         component: () => import("pages/admin/MapMarker.vue"),
       },

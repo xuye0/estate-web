@@ -201,6 +201,7 @@ export default {
     fetch_data() {
       all_staff().then((res) => {
         this.list = res.data;
+        this.model = this.list[0];
       });
     },
   },
