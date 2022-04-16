@@ -1,11 +1,11 @@
 import { api } from "boot/axios";
 import qs from "qs";
 
-export function login(id, password) {
+export function login(type, credential, password) {
   return api({
-    url: "/session",
+    url: "/session/" + type,
     method: "post",
-    data: qs.stringify({ id, password }),
+    data: qs.stringify({ credential, password }),
   });
 }
 

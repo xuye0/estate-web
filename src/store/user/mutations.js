@@ -4,7 +4,7 @@ export function SET_LOGIN(state, obj) {
   state.id = user.id;
   state.username = user.username;
   state.is_authenticated = true;
-  state.is_administrator = user.isAdministrator;
+  state.role = user.role;
 }
 
 export function RESET_LOGIN(state) {
@@ -12,5 +12,5 @@ export function RESET_LOGIN(state) {
   state.id = "";
   state.username = "";
   state.is_authenticated = false;
-  state.is_administrator = false;
+  state.role = "";
 }

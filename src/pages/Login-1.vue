@@ -17,7 +17,12 @@
           </q-card-section>
           <q-card-section>
             <q-form class="q-gutter-md">
-              <q-input filled v-model="this.id" label="用户" lazy-rules />
+              <q-input
+                filled
+                v-model="this.credential"
+                label="用户"
+                lazy-rules
+              />
 
               <q-input
                 type="password"
@@ -49,13 +54,14 @@ import { login } from "src/api/user";
 export default {
   data() {
     return {
-      id: "xuye",
+      type: "staff",
+      credential: "xuye",
       password: "123456",
     };
   },
   methods: {
     handleLogin() {
-      login(this.id, this.password).then((res) => {
+      login(this.type, this.credential, this.password).then((res) => {
         if (res.code === 1000) {
           const { data } = res;
           const { user } = data;

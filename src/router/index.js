@@ -47,7 +47,7 @@ Router.beforeEach((to, from, next) => {
     if (!user.is_authenticated) {
       next({ path: "/login" });
     } else if (to.matched[0].path === "/admin") {
-      if (user.is_administrator) next();
+      if (user.role === "administrator") next();
       else {
         Notify.create({
           type: "negative",

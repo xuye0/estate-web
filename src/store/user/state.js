@@ -5,6 +5,6 @@ export default function () {
     username: undefined,
     avatar_url: undefined,
     is_authenticated: false,
-    is_administrator: false,
+    role: undefined,
   };
 }
