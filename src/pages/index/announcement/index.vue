@@ -16,7 +16,6 @@ import { announcement } from "src/api/announcement";
 export default {
   name: "index",
   mounted() {
-    console.log("1");
     this.fetch_data();
   },
   data() {

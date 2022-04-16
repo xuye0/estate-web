@@ -43,6 +43,10 @@ const routes = [
         component: () => import("pages/admin/announcement"),
       },
       {
+        path: "newsAdd",
+        component: () => import("pages/admin/news/Add"),
+      },
+      {
         path: "mapMarker",
         component: () => import("pages/admin/MapMarker.vue"),
       },

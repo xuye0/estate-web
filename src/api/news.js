@@ -6,3 +6,11 @@ export function news() {
     method: "get",
   });
 }
+
+export function save(data) {
+  return api({
+    url: "/news",
+    method: "post",
+    data,
+  });
+}

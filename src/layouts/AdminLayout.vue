@@ -72,6 +72,27 @@
           </q-item-section>
         </q-item>
 
+        <q-expansion-item icon="menu_open" label="资讯管理">
+          <q-item
+            to="/admin/newsAdd"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>资讯发布</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/staffRemove"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>删除员工</q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-expansion-item>
+
         <q-item to="/admin/directory" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="card_giftcard" />
