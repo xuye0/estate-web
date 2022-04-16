@@ -65,14 +65,14 @@
         </q-item>
         <q-item to="/admin/announcement" active-class="text-orange">
           <q-item-section avatar>
-            <q-icon name="dashboard" />
+            <q-icon name="public" />
           </q-item-section>
           <q-item-section>
             <q-item-label>公告编辑</q-item-label>
           </q-item-section>
         </q-item>
 
-        <q-expansion-item icon="menu_open" label="资讯管理">
+        <q-expansion-item icon="newspaper" label="资讯管理">
           <q-item
             to="/admin/newsAdd"
             class="q-ml-xl"
@@ -89,6 +89,84 @@
           >
             <q-item-section>
               <q-item-label>更新/删除</q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-expansion-item>
+
+        <q-expansion-item icon="people" label="员工管理">
+          <q-item
+            to="/admin/staffList"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>列表</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/staffAdd"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>添加</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/staffEdit"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>更新</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/staffRemove"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>删除</q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-expansion-item>
+        <q-expansion-item icon="apartment" label="楼盘管理">
+          <q-item
+            to="/admin/estateList"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>列表</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-item
+            to="/admin/estateAdd"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>添加</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/estateEdit"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>更新</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/estateRemove"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>删除</q-item-label>
             </q-item-section>
           </q-item>
         </q-expansion-item>
@@ -142,14 +220,6 @@
             <q-item-label>Cards</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item to="/admin/tables" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="table_chart" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Tables</q-item-label>
-          </q-item-section>
-        </q-item>
         <q-item to="/admin/checkout" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="check_circle_outline" />
@@ -174,83 +244,6 @@
             <q-item-label>Product Catalogues</q-item-label>
           </q-item-section>
         </q-item>
-        <q-expansion-item icon="menu_open" label="员工管理">
-          <q-item
-            to="/admin/staffList"
-            class="q-ml-xl"
-            active-class="text-orange"
-          >
-            <q-item-section>
-              <q-item-label>员工列表</q-item-label>
-            </q-item-section>
-          </q-item>
-          <q-item
-            to="/admin/staffAdd"
-            class="q-ml-xl"
-            active-class="text-orange"
-          >
-            <q-item-section>
-              <q-item-label>添加员工</q-item-label>
-            </q-item-section>
-          </q-item>
-          <q-item
-            to="/admin/staffRemove"
-            class="q-ml-xl"
-            active-class="text-orange"
-          >
-            <q-item-section>
-              <q-item-label>删除员工</q-item-label>
-            </q-item-section>
-          </q-item>
-          <q-item
-            to="/admin/staffEdit"
-            class="q-ml-xl"
-            active-class="text-orange"
-          >
-            <q-item-section>
-              <q-item-label>更新员工</q-item-label>
-            </q-item-section>
-          </q-item>
-        </q-expansion-item>
-        <q-expansion-item icon="menu_open" label="楼盘管理">
-          <q-item
-            to="/admin/estateList"
-            class="q-ml-xl"
-            active-class="text-orange"
-          >
-            <q-item-section>
-              <q-item-label>楼盘列表</q-item-label>
-            </q-item-section>
-          </q-item>
-
-          <q-item
-            to="/admin/estateAdd"
-            class="q-ml-xl"
-            active-class="text-orange"
-          >
-            <q-item-section>
-              <q-item-label>添加楼盘</q-item-label>
-            </q-item-section>
-          </q-item>
-          <q-item
-            to="/admin/estateRemove"
-            class="q-ml-xl"
-            active-class="text-orange"
-          >
-            <q-item-section>
-              <q-item-label>删除楼盘</q-item-label>
-            </q-item-section>
-          </q-item>
-          <q-item
-            to="/admin/estateEdit"
-            class="q-ml-xl"
-            active-class="text-orange"
-          >
-            <q-item-section>
-              <q-item-label>编辑楼盘</q-item-label>
-            </q-item-section>
-          </q-item>
-        </q-expansion-item>
       </q-list>
     </q-drawer>
 

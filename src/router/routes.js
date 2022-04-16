@@ -63,10 +63,6 @@ const routes = [
         component: () => import("pages/admin/Cards.vue"),
       },
       {
-        path: "tables",
-        component: () => import("pages/admin/Tables.vue"),
-      },
-      {
         path: "checkout",
         component: () => import("pages/admin/Checkout.vue"),
       },
