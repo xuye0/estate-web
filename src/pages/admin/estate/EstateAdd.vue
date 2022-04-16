@@ -1,7 +1,7 @@
 <template>
   <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <q-card-section class="text-h6 q-pa-sm">
-      <div class="text-h6">添加楼盘</div>
+      <div class="text-h6" style="background-color: limegreen">添加楼盘</div>
     </q-card-section>
 
     <q-card-section class="q-pa-sm row">

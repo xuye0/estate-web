@@ -10,7 +10,7 @@
       filled
       v-model="model"
       :options="list"
-      option-label="address"
+      option-label="username"
       label="选择员工"
     />
 

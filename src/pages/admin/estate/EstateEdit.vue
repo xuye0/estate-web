@@ -1,14 +1,14 @@
 <template>
   <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <q-card-section class="text-h6 q-pa-sm">
-      <div class="text-h6">编辑楼盘</div>
+      <div class="text-h6" style="background-color: grey">编辑楼盘</div>
     </q-card-section>
 
     <q-select
       filled
       v-model="model"
       :options="list"
-      option-label="address"
+      option-label="name"
       label="选择楼盘"
     />
 
@@ -119,7 +119,7 @@
         </q-item>
       </q-card-section>
       <q-card-actions align="right">
-        <q-btn color="red" @click="this.handleEdit()">更新楼盘</q-btn>
+        <q-btn color="grey" @click="this.handleEdit()">更新楼盘</q-btn>
       </q-card-actions>
     </div>
   </div>
@@ -140,6 +140,7 @@ export default {
     fetch_data() {
       all_estate().then((res) => {
         this.list = res.data;
+        this.model = this.list[0];
       });
     },
   },
