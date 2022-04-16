@@ -54,7 +54,7 @@ import { login } from "src/api/user";
 export default {
   data() {
     return {
-      type: "staff",
+      type: "customer",
       credential: "xuye",
       password: "123456",
     };
