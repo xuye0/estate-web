@@ -20,7 +20,8 @@
               <q-input
                 filled
                 v-model="this.credential"
-                label="用户"
+                label="凭证"
+                hint="员工请输入user_id，顾客请输入手机号"
                 lazy-rules
               />
 
@@ -31,15 +32,15 @@
                 label="密码"
                 lazy-rules
               />
-
-              <div>
-                <q-btn
-                  label="登录"
-                  @click="handleLogin()"
-                  type="button"
-                  color="primary"
-                />
-              </div>
+              <q-btn-toggle
+                v-model="this.type"
+                toggle-color="primary"
+                @click="handleLogin()"
+                :options="[
+                  { label: '员工登陆', value: 'staff' },
+                  { label: '顾客登陆', value: 'customer' },
+                ]"
+              />
             </q-form>
           </q-card-section>
         </q-card>
@@ -54,7 +55,7 @@ import { login } from "src/api/user";
 export default {
   data() {
     return {
-      type: "customer",
+      type: "",
       credential: "xuye",
       password: "123456",
     };
