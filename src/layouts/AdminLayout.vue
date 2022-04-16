@@ -68,7 +68,7 @@
             <q-icon name="dashboard" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>announcement</q-item-label>
+            <q-item-label>公告编辑</q-item-label>
           </q-item-section>
         </q-item>
 

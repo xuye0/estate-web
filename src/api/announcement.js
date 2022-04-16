@@ -6,3 +6,11 @@ export function announcement() {
     method: "get",
   });
 }
+
+export function update_announcement(data) {
+  return api({
+    url: "/announcement",
+    method: "put",
+    data,
+  });
+}
