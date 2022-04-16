@@ -16,10 +16,10 @@ export function logout() {
   });
 }
 
-export function change_password(oldPassword, newPassword) {
+export function change_password(oldPassword, newPassword, role) {
   return api({
     url: "/session",
     method: "put",
-    data: qs.stringify({ oldPassword, newPassword }),
+    data: qs.stringify({ oldPassword, newPassword, role }),
   });
 }

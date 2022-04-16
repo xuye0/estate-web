@@ -83,7 +83,8 @@ export default {
       }
       change_password(
         this.password_info.oldPassword,
-        this.password_info.newPassword
+        this.password_info.newPassword,
+        this.$store.state.user.role
       );
     },
   },

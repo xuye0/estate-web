@@ -11,7 +11,11 @@
           align="justify"
           narrow-indicator
         >
-          <q-tab name="profile" label="资料" />
+          <q-tab
+            v-if="this.$store.state.user.role !== 'customer'"
+            name="profile"
+            label="资料"
+          />
           <q-tab name="password" label="密码" />
         </q-tabs>
 
@@ -40,6 +44,13 @@ export default {
     return {
       tab: "profile",
     };
+  },
+  created() {
+    if (this.$store.state.user.role !== "customer") {
+      this.tab = "profile";
+    } else {
+      this.tab = "password";
+    }
   },
 };
 </script>

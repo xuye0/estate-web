@@ -13,7 +13,7 @@
             >
               <q-list class="">
                 <q-item-label header class="text-center"
-                  >{{ contacts_list.length }} 位同事</q-item-label
+                  >{{ contacts_list.length }} 位销售</q-item-label
                 >
 
                 <span

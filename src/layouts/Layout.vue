@@ -99,21 +99,41 @@
 
           <q-separator inset class="q-my-sm" />
 
-          <q-item
-            :to="link.to"
-            class="GNL__drawer-item"
-            v-ripple
-            v-for="link in links2"
-            :key="link.text"
-            clickable
-          >
-            <q-item-section avatar>
-              <q-icon :name="link.icon" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ link.text }}</q-item-label>
-            </q-item-section>
-          </q-item>
+          <div v-if="this.$store.state.user.role === 'staff'">
+            <q-item
+              :to="link.to"
+              class="GNL__drawer-item"
+              v-ripple
+              v-for="link in links2"
+              :key="link.text"
+              clickable
+            >
+              <q-item-section avatar>
+                <q-icon :name="link.icon" />
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>{{ link.text }}</q-item-label>
+              </q-item-section>
+            </q-item>
+          </div>
+
+          <div v-else>
+            <q-item
+              :to="link.to"
+              class="GNL__drawer-item"
+              v-ripple
+              v-for="link in links3"
+              :key="link.text"
+              clickable
+            >
+              <q-item-section avatar>
+                <q-icon :name="link.icon" />
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>{{ link.text }}</q-item-label>
+              </q-item-section>
+            </q-item>
+          </div>
 
           <q-separator inset class="q-my-sm" />
 
@@ -207,6 +227,10 @@ export default {
       links2: [
         { icon: "flag", text: "我的同事", to: "/contact" },
         { icon: "settings", text: "个人资料", to: "/settings" },
+      ],
+      links3: [
+        { icon: "flag", text: "联系销售", to: "/contact" },
+        { icon: "settings", text: "修改密码", to: "/settings" },
       ],
       onClear,
       changeDate,
