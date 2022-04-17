@@ -65,7 +65,6 @@
     </q-card-section>
 
     <q-card-actions align="right">
-      {{ this.form }}
       <q-btn color="green" @click="this.handleUpdate()">更新</q-btn>
       <q-btn color="red" @click="this.handleDelete()">删除</q-btn>
     </q-card-actions>

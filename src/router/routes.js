@@ -119,10 +119,6 @@ const routes = [
         component: () => import("pages/admin/login/Add.vue"),
       },
       {
-        path: "loginRemove",
-        component: () => import("pages/admin/login/Remove.vue"),
-      },
-      {
         path: "loginEdit",
         component: () => import("pages/admin/login/Edit.vue"),
       },
