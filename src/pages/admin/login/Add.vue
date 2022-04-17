@@ -2,6 +2,9 @@
   <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <q-card-section class="q-pa-sm">
       <div class="text-h6">
+        <span>不可登陆员工数量：{{ this.count.staff }} </span>
+        <br />
+        <span>不可登陆顾客数量：{{ this.count.customer }}</span>
         <div>请选择要添加的用户类型</div>
         <q-btn-toggle
           v-model="this.role"
@@ -86,7 +89,11 @@
 </template>
 
 <script>
-import { save, unable_login_staff_list } from "src/api/user";
+import {
+  save,
+  unable_login_count,
+  unable_login_staff_list,
+} from "src/api/user";
 
 export default {
   name: "StaffAdd",
@@ -95,6 +102,9 @@ export default {
   },
   methods: {
     fetch_data() {
+      unable_login_count().then((res) => {
+        this.count = res.data;
+      });
       unable_login_staff_list(this.role).then((res) => {
         this.list = res.data;
         this.form = this.list[0];
@@ -110,6 +120,10 @@ export default {
   data() {
     return {
       role: "staff",
+      count: {
+        staff: 0,
+        customer: 0,
+      },
       list: [
         {
           id: null,

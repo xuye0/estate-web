@@ -38,6 +38,13 @@ export function unable_login_staff_list(type) {
   });
 }
 
+export function unable_login_count() {
+  return api({
+    url: "/session/unable/login/count",
+    method: "get",
+  });
+}
+
 export function save(data) {
   return api({
     url: "/session",
