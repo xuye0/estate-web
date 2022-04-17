@@ -111,6 +111,22 @@ const routes = [
         component: () => import("pages/admin/staff/StaffEdit.vue"),
       },
       {
+        path: "loginList",
+        component: () => import("pages/admin/login/List.vue"),
+      },
+      {
+        path: "loginAdd",
+        component: () => import("pages/admin/login/Add.vue"),
+      },
+      {
+        path: "loginRemove",
+        component: () => import("pages/admin/login/Remove.vue"),
+      },
+      {
+        path: "loginEdit",
+        component: () => import("pages/admin/login/Edit.vue"),
+      },
+      {
         path: "estateList",
         component: () => import("pages/admin/estate/EstateList.vue"),
       },

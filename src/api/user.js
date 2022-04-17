@@ -23,3 +23,25 @@ export function change_password(oldPassword, newPassword, role) {
     data: qs.stringify({ oldPassword, newPassword, role }),
   });
 }
+
+export function list() {
+  return api({
+    url: "/session/login/list",
+    method: "get",
+  });
+}
+
+export function unable_login_staff_list(type) {
+  return api({
+    url: "/session/unable/login/" + type,
+    method: "get",
+  });
+}
+
+export function save(data) {
+  return api({
+    url: "/session",
+    method: "post",
+    data,
+  });
+}

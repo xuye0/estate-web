@@ -131,6 +131,46 @@
             </q-item-section>
           </q-item>
         </q-expansion-item>
+
+        <q-expansion-item icon="settings" label="登录管理">
+          <q-item
+            to="/admin/loginList"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>列表</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/loginAdd"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>添加</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/loginEdit"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>更新</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item
+            to="/admin/loginRemove"
+            class="q-ml-xl"
+            active-class="text-orange"
+          >
+            <q-item-section>
+              <q-item-label>删除</q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-expansion-item>
+
         <q-expansion-item icon="apartment" label="楼盘管理">
           <q-item
             to="/admin/estateList"
