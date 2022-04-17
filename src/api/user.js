@@ -45,6 +45,28 @@ export function unable_login_count() {
   });
 }
 
+export function listAll() {
+  return api({
+    url: "/session/list",
+    method: "get",
+  });
+}
+
+export function put(data) {
+  return api({
+    url: "/session/" + data.id,
+    method: "put",
+    data,
+  });
+}
+
+export function del(id) {
+  return api({
+    url: "/session/" + id,
+    method: "delete",
+  });
+}
+
 export function save(data) {
   return api({
     url: "/session",
