@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       type: "",
-      credential: "xuye",
+      credential: "admin",
       password: "123456",
     };
   },

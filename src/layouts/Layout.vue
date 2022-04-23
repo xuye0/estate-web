@@ -99,7 +99,7 @@
 
           <q-separator inset class="q-my-sm" />
 
-          <div v-if="this.$store.state.user.role === 'staff'">
+          <div v-if="this.$store.state.user.role !== 'customer'">
             <q-item
               :to="link.to"
               class="GNL__drawer-item"
@@ -226,6 +226,7 @@ export default {
       ],
       links2: [
         { icon: "flag", text: "我的同事", to: "/contact" },
+        { icon: "manage_accounts", text: "维护客户", to: "/costumer" },
         { icon: "settings", text: "个人资料", to: "/settings" },
       ],
       links3: [

@@ -21,7 +21,11 @@ const routes = [
       },
       {
         path: "/contact",
-        component: () => import("pages/index/Contact.vue"),
+        component: () => import("pages/index/contact"),
+      },
+      {
+        path: "/costumer",
+        component: () => import("pages/index/costumer"),
       },
       {
         path: "/settings",
