@@ -225,8 +225,8 @@ export default {
         { icon: "today", text: "日历", to: "/calendar" },
       ],
       links2: [
-        { icon: "flag", text: "我的同事", to: "/contact" },
-        { icon: "manage_accounts", text: "维护客户", to: "/costumer" },
+        { icon: "flag", text: "同事", to: "/contact" },
+        { icon: "manage_accounts", text: "客户", to: "/costumer" },
         { icon: "settings", text: "个人资料", to: "/settings" },
       ],
       links3: [
