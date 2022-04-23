@@ -1,10 +1,13 @@
 <template>
   <q-card class="">
-    <q-img :src="data.img" height="220px">
+    <q-img
+      :src="require('../../assets/products/c-d-x-PDX_a_82obo-unsplash.jpg')"
+      height="220px"
+    >
       <q-chip
         v-if="data.chip"
-        :class="data.chip_class"
-        :color="data.chip_color"
+        class="text-blue absolute-top-right"
+        color="grey - 4"
         :label="data.chip"
       ></q-chip>
     </q-img>
@@ -21,11 +24,9 @@
     </q-card-section>
 
     <q-card-section>
-      <div class="text-h6">
-        {{ data.title }}
-      </div>
+      <div class="text-h6">{{ data.name }} - {{ data.cityName }}</div>
       <div class="text-subtitle1 text-justify q-mt-sm">
-        {{ data.caption }}
+        {{ data.address }}
       </div>
       <div>
         <q-rating
@@ -43,7 +44,7 @@
     </q-card-section>
     <q-card-section>
       <div class="col-12">
-        <span class="text-h6">{{ data.amount }}</span>
+        <span class="text-h6">{{ data.price }}</span>
         <span class="text-h6 float-right">
           <q-btn label="See Details" rounded color="secondary" outline></q-btn>
         </span>

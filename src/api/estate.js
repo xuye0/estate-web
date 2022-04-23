@@ -7,6 +7,13 @@ export function all_estate() {
   });
 }
 
+export function info_estate() {
+  return api({
+    url: "/estate/info",
+    method: "get",
+  });
+}
+
 export function add_estate(data) {
   return api({
     url: "/estate",
