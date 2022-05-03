@@ -5,12 +5,10 @@
         <q-card-section class="q-pa-sm">
           <q-input rounded v-model="search" outlined placeholder="搜索房产">
             <template v-slot:append>
-              <q-icon v-if="search === ''" name="search" />
               <q-icon
-                v-else
-                name="clear"
-                class="cursor-pointer"
-                @click="search = ''"
+                name="search"
+                class="search"
+                @click="this.handleSearch()"
               />
             </template>
           </q-input>
@@ -30,7 +28,7 @@
 
 <script>
 import { defineComponent, defineAsyncComponent } from "vue";
-import { all_estate, info_estate } from "src/api/estate";
+import { all_estate, info_estate, search_estate } from "src/api/estate";
 
 const data = [];
 
@@ -47,6 +45,11 @@ export default defineComponent({
   methods: {
     fetch_data() {
       info_estate().then((res) => {
+        this.list = res.data;
+      });
+    },
+    handleSearch() {
+      search_estate(this.search).then((res) => {
         this.list = res.data;
       });
     },

@@ -24,7 +24,7 @@
                 </q-item-section>
                 <q-item-section>
                   <q-item-label class="text-h6 text-blue text-bold"
-                    >4321</q-item-label
+                  >4321</q-item-label
                   >
                   <q-item-label caption>Fashions</q-item-label>
                 </q-item-section>
@@ -41,7 +41,7 @@
                 </q-item-section>
                 <q-item-section>
                   <q-item-label class="text-h6 text-grey-8 text-bold"
-                    >9876</q-item-label
+                  >9876</q-item-label
                   >
                   <q-item-label caption>Electronics</q-item-label>
                 </q-item-section>
@@ -58,7 +58,7 @@
                 </q-item-section>
                 <q-item-section>
                   <q-item-label class="text-h6 text-green-6 text-bold"
-                    >345</q-item-label
+                  >345</q-item-label
                   >
                   <q-item-label caption>Toys</q-item-label>
                 </q-item-section>
@@ -75,7 +75,7 @@
                 </q-item-section>
                 <q-item-section>
                   <q-item-label class="text-h6 text-orange-8 text-bold"
-                    >1021</q-item-label
+                  >1021</q-item-label
                   >
                   <q-item-label caption>Vouchers</q-item-label>
                 </q-item-section>

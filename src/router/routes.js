@@ -43,10 +43,6 @@ const routes = [
         component: () => import("pages/admin/Dashboard.vue"),
       },
       {
-        path: "dashboard2",
-        component: () => import("pages/admin/Dashboard2.vue"),
-      },
-      {
         path: "announcement",
         component: () => import("pages/admin/announcement"),
       },

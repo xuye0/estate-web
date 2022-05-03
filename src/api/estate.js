@@ -1,4 +1,5 @@
 import { api } from "boot/axios";
+import qs from "qs";
 
 export function all_estate() {
   return api({
@@ -11,6 +12,14 @@ export function info_estate() {
   return api({
     url: "/estate/info",
     method: "get",
+  });
+}
+
+export function search_estate(search) {
+  return api({
+    url: "/estate/search",
+    method: "post",
+    data: qs.stringify({ name: search }),
   });
 }
 

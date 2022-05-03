@@ -1,30 +1,36 @@
 <template>
   <div class="row q-col-gutter-sm q-py-sm">
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <q-card class="q-ma-xs" style="background-color: #38b1c5">
-        <q-card-section class="text-h6 text-white">
-          Today's View
-        </q-card-section>
+      <q-card
+        class="q-ma-xs"
+        style="background-color: #38b1c5"
+        @click="this.$router.push('/admin/announcement')"
+      >
+        <q-card-section class="text-h6 text-white"> 公告编辑 </q-card-section>
         <q-card-section class="q-pa-none">
           <div ref="linechart" id="linechart" style="height: 250px"></div>
         </q-card-section>
       </q-card>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <q-card class="q-ma-xs" style="background-color: #ea4b64">
-        <q-card-section class="text-h6 text-white">
-          Daily Sales
-        </q-card-section>
+      <q-card
+        @click="this.$router.push('/admin/newsAdd')"
+        class="q-ma-xs"
+        style="background-color: #ea4b64"
+      >
+        <q-card-section class="text-h6 text-white"> 资讯发布 </q-card-section>
         <q-card-section class="q-pa-none">
           <div ref="barchart" id="barchart" style="height: 250px"></div>
         </q-card-section>
       </q-card>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <q-card class="q-ma-xs" style="background-color: #1e88e5">
-        <q-card-section class="text-h6 text-white">
-          Today's User Visit
-        </q-card-section>
+      <q-card
+        @click="this.$router.push('/admin/estateList')"
+        class="q-ma-xs"
+        style="background-color: #1e88e5"
+      >
+        <q-card-section class="text-h6 text-white">楼盘列表</q-card-section>
         <q-card-section class="q-pa-none">
           <div ref="linechart2" id="linechart2" style="height: 250px"></div>
         </q-card-section>

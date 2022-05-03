@@ -3,24 +3,6 @@
     <q-card-section class="text-h6 q-pa-sm">
       <div class="text-h6" style="background-color: limegreen">添加楼盘</div>
     </q-card-section>
-
-    <q-card-section class="q-pa-sm row">
-      <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> 地址 </q-item-section>
-      </q-item>
-      <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
-        <q-item-section>
-          <q-input
-            type="input"
-            dense
-            outlined
-            round
-            v-model="form.address"
-            label="地址"
-          />
-        </q-item-section>
-      </q-item>
-    </q-card-section>
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
         <q-item-section> 房产名称 </q-item-section>
@@ -38,6 +20,24 @@
         </q-item-section>
       </q-item>
     </q-card-section>
+    <q-card-section class="q-pa-sm row">
+      <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+        <q-item-section> 地址 </q-item-section>
+      </q-item>
+      <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
+        <q-item-section>
+          <q-input
+            type="input"
+            dense
+            outlined
+            round
+            v-model="form.address"
+            label="地址"
+          />
+        </q-item-section>
+      </q-item>
+    </q-card-section>
+
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
         <q-item-section> 城市 </q-item-section>
@@ -97,7 +97,7 @@
 
     <q-card-section class="q-pa-sm row">
       <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-        <q-item-section> 主页 </q-item-section>
+        <q-item-section>图片链接</q-item-section>
       </q-item>
       <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
         <q-item-section>
@@ -107,7 +107,7 @@
             outlined
             round
             v-model="form.websiteUrl"
-            label="主页"
+            label="图片链接"
           />
         </q-item-section>
       </q-item>

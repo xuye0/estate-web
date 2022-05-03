@@ -15,12 +15,32 @@
     <div v-if="this.model.id !== undefined">
       <q-card-section class="q-pa-sm row">
         <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+          <q-item-section> 房产名称 </q-item-section>
+        </q-item>
+        <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
+          <q-item-section>
+            <q-input
+              type="input"
+              readonly
+              dense
+              outlined
+              round
+              v-model="model.name"
+              label="房产名称"
+            />
+          </q-item-section>
+        </q-item>
+      </q-card-section>
+
+      <q-card-section class="q-pa-sm row">
+        <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
           <q-item-section> 地址 </q-item-section>
         </q-item>
         <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
           <q-item-section>
             <q-input
               type="input"
+              readonly
               dense
               outlined
               round
@@ -32,33 +52,20 @@
       </q-card-section>
       <q-card-section class="q-pa-sm row">
         <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-          <q-item-section> 房产名称 </q-item-section>
-        </q-item>
-        <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
-          <q-item-section>
-            <q-input
-              type="input"
-              dense
-              outlined
-              round
-              v-model="model.name"
-              label="房产名称"
-            />
-          </q-item-section>
-        </q-item>
-      </q-card-section>
-      <q-card-section class="q-pa-sm row">
-        <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
           <q-item-section> 城市 </q-item-section>
         </q-item>
         <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
           <q-item-section>
-            <q-input
-              type="input"
+            <q-select
               dense
               outlined
               round
               v-model="model.cityId"
+              :options="city_options"
+              option-label="name"
+              option-value="id"
+              emit-value
+              readonly
               label="城市"
             />
           </q-item-section>
@@ -75,6 +82,7 @@
               dense
               outlined
               round
+              readonly
               v-model="model.type"
               label="类型"
             />
@@ -90,6 +98,7 @@
           <q-item-section>
             <q-input
               type="number"
+              readonly
               dense
               outlined
               round
@@ -102,12 +111,13 @@
 
       <q-card-section class="q-pa-sm row">
         <q-item class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-          <q-item-section> 主页 </q-item-section>
+          <q-item-section>图片链接</q-item-section>
         </q-item>
         <q-item class="col-lg-10 col-md-10 col-sm-18 col-xs-18">
           <q-item-section>
             <q-input
               type="input"
+              readonly
               dense
               outlined
               round
@@ -126,6 +136,7 @@
 
 <script>
 import { remove_estate, all_estate } from "src/api/estate";
+import { citys } from "src/api/city";
 
 export default {
   name: "estateRemove",
@@ -139,6 +150,9 @@ export default {
       });
     },
     fetch_data() {
+      citys().then((res) => {
+        this.city_options = res.data;
+      });
       all_estate().then((res) => {
         this.list = res.data;
         this.model = this.list[0];
@@ -147,6 +161,7 @@ export default {
   },
   data() {
     return {
+      city_options: [],
       model: {
         id: undefined,
         name: undefined,

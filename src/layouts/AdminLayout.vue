@@ -55,14 +55,14 @@
             <q-item-label>Dashboard</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item to="/admin/dashboard2" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="dashboard" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>CRM Dashboard</q-item-label>
-          </q-item-section>
-        </q-item>
+        <!--        <q-item to="/admin/dashboard2" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="dashboard" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>CRM Dashboard</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
         <q-item to="/admin/announcement" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="public" />
@@ -202,71 +202,70 @@
           </q-item>
         </q-expansion-item>
 
-        <q-item to="/admin/directory" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="card_giftcard" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Directory</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item to="/admin/treeTable" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="list" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>TreeTable</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item to="/admin/charts" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="insert_chart" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Charts</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item to="/admin/footer" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="info" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Footer</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item to="/admin/cardHeader" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="card_giftcard" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Card Header</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item to="/admin/cards" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="card_giftcard" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Cards</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item to="/admin/checkout" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="check_circle_outline" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Checkout</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item to="/admin/pagination" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="date_range" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Pagination</q-item-label>
-          </q-item-section>
-        </q-item>
+        <!--        <q-item to="/admin/directory" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="card_giftcard" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>Directory</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
+        <!--        <q-item to="/admin/treeTable" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="list" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>TreeTable</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
+        <!--        <q-item to="/admin/charts" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="insert_chart" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>Charts</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
+        <!--        <q-item to="/admin/footer" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="info" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>Footer</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
+        <!--        <q-item to="/admin/cardHeader" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="card_giftcard" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>Card Header</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
+        <!--        <q-item to="/admin/cards" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="card_giftcard" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>Cards</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
+        <!--        <q-item to="/admin/checkout" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="check_circle_outline" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>Checkout</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
+        <!--        <q-item to="/admin/pagination" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="date_range" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>Pagination</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
         <q-item to="/admin/ecommerce" active-class="text-orange">
           <q-item-section avatar>
             <q-icon name="shopping_cart" />

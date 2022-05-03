@@ -4,7 +4,6 @@
     <q-dialog v-model="prompt" persistent>
       <q-card style="min-width: 350px">
         <q-card-section>
-          {{ this.form }}
           <div class="text-h6">添加客户</div>
         </q-card-section>
 
