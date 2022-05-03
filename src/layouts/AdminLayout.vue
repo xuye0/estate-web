@@ -52,7 +52,7 @@
             <q-icon name="dashboard" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Dashboard</q-item-label>
+            <q-item-label>主页</q-item-label>
           </q-item-section>
         </q-item>
         <!--        <q-item to="/admin/dashboard2" active-class="text-orange">-->
