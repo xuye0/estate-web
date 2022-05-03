@@ -266,14 +266,14 @@
         <!--            <q-item-label>Pagination</q-item-label>-->
         <!--          </q-item-section>-->
         <!--        </q-item>-->
-        <q-item to="/admin/ecommerce" active-class="text-orange">
-          <q-item-section avatar>
-            <q-icon name="shopping_cart" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Product Catalogues</q-item-label>
-          </q-item-section>
-        </q-item>
+        <!--        <q-item to="/admin/ecommerce" active-class="text-orange">-->
+        <!--          <q-item-section avatar>-->
+        <!--            <q-icon name="shopping_cart" />-->
+        <!--          </q-item-section>-->
+        <!--          <q-item-section>-->
+        <!--            <q-item-label>Product Catalogues</q-item-label>-->
+        <!--          </q-item-section>-->
+        <!--        </q-item>-->
       </q-list>
     </q-drawer>
 

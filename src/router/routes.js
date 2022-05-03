@@ -12,6 +12,10 @@ const routes = [
         component: () => import("pages/index/announcement"),
       },
       {
+        path: "/estate",
+        component: () => import("pages/ProductCatalogues"),
+      },
+      {
         path: "/news",
         component: () => import("pages/index/news"),
       },

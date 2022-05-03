@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf" class="bg-grey-1">
+  <q-layout view="hHh Lpr lff" class="bg-grey-1">
     <q-header elevated class="bg-white text-grey-8" height-hint="64">
       <q-toolbar class="GNL__toolbar">
         <q-btn
@@ -220,9 +220,11 @@ export default {
       byWebsite,
       byDate,
       links1: [
+        { icon: "home", text: "个人", to: "/" },
         { icon: "campaign", text: "公告", to: "/announcement" },
         { icon: "newspaper", text: "新闻", to: "/news" },
         { icon: "today", text: "日历", to: "/calendar" },
+        { icon: "apartment", text: "楼盘", to: "estate" },
       ],
       links2: [
         { icon: "flag", text: "同事", to: "/contact" },
