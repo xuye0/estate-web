@@ -20,7 +20,7 @@
           <!--          <img-->
           <!--            src="https://cdn.quasar.dev/img/layout-gallery/logo-google.svg"-->
           <!--          />-->
-          <span class="q-ml-sm">楼盘信息</span>
+          <span class="q-ml-sm">楼盘信息统计系统</span>
         </q-toolbar-title>
 
         <q-space />

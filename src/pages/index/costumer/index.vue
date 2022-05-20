@@ -122,6 +122,11 @@ export default defineComponent({
         if (res.data === 1) {
           this.prompt = false;
           this.fetch_data();
+          this.form.id = "";
+          this.form.name = "";
+          this.form.age = "";
+          this.form.phone = "";
+          this.form.description = "";
         }
       });
     },

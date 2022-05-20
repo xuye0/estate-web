@@ -80,6 +80,10 @@ export default {
 
 <style>
 .bg-image {
-  background-image: linear-gradient(135deg, #7028e4 0%, #e5b2ca 100%);
+  background-image: linear-gradient(
+    135deg,
+    rgba(55, 25, 107, 0.94) 0%,
+    #bea3a3 100%
+  );
 }
 </style>

@@ -10,7 +10,7 @@
           icon="menu"
           aria-label="Menu"
         />
-        <q-toolbar-title> 管理员后台</q-toolbar-title>
+        <q-toolbar-title> 楼盘信息统计系统-管理员后台</q-toolbar-title>
         <q-space />
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn
