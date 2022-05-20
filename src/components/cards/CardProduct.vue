@@ -43,7 +43,13 @@
       <div class="col-12">
         <span class="text-h6">{{ data.price }}</span>
         <span class="text-h6 float-right">
-          <q-btn rounded color="secondary" outline>联系销售</q-btn>
+          <q-btn
+            rounded
+            color="secondary"
+            outline
+            @click="this.$router.push('/contact')"
+            >联系销售</q-btn
+          >
         </span>
       </div>
     </q-card-section>
