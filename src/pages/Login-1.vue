@@ -57,7 +57,7 @@ export default {
     return {
       type: "",
       credential: "admin",
-      password: "123456",
+      password: "admin",
     };
   },
   methods: {
